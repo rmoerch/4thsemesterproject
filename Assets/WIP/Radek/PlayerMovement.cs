@@ -20,8 +20,8 @@ public class PlayerMovement : MonoBehaviour
         //Save last known walking direction (needed for idle positioning)
         if(movement.y > 0 && movement.x == 0) { direction = 2f; }
         else if(movement.y < 0 && movement.x == 0) { direction = 0f; }
-        //else if(movement.x > 0) { direction = 3f; }
-        //else if(movement.x < 0) { direction = 1f; }
+        else if(movement.x > 0) { direction = 3f; }
+        else if(movement.x < 0) { direction = 1f; }
 
         //Send information to animator in Unity
         animator.SetFloat("Horizontal", movement.x);
