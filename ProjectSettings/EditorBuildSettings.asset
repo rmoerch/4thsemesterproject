@@ -7,8 +7,8 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: 93a34615facf57848beb23815f42bf0b
+    guid: adc763a9a072849499731c556e9168ec
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/WIP/Radek/SampleScene.unity
+    guid: c41cbde0cbbdd4140b873056487386db
   m_configObjects: {}
