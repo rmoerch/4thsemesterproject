@@ -16,5 +16,15 @@ public class Arrow : MonoBehaviour
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, 0.5f);
         Destroy(gameObject);
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
 }
