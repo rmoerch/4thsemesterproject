@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BrackeysMoving : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 8f;
     public Rigidbody2D rb;
     public Animator animator;
     public Camera cam;
@@ -35,7 +35,15 @@ public class BrackeysMoving : MonoBehaviour
 
     void FixedUpdate()
     {
+        //If the move is diagonal, lower the movement so the walking speed would stay the same.
+        if (movement.x == 1 && movement.y == 1) { movement.x = 0.707f; movement.y = 0.707f; }
+        else if (movement.x == 1 && movement.y == -1) { movement.x = 0.707f; movement.y = -0.707f; }
+        else if (movement.x == -1 && movement.y == 1) { movement.x = -0.707f; movement.y = 0.707f; }
+        else if (movement.x == -1 && movement.y == -1) { movement.x = -0.707f; movement.y = -0.707f; }
+
+        //Move the rigid body
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
         //Vector3 lookDir = new Vector3(transform.position.x - mousePos.x, transform.position.y - mousePos.y, 0);
         //rb.transform.LookAt(lookDir);
     }
