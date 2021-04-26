@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Spawner : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Spawner : MonoBehaviour
 
     public void PlayerSpawn()
     {
+        var vCam = GameObject.FindGameObjectsWithTag("VirtualCamera")[0].GetComponent<CinemachineVirtualCamera>();
         DestroyObjects();
 
         dungeonGenerator.GetComponent<RoomFirstDungeonGenerator>();
@@ -30,14 +32,15 @@ public class Spawner : MonoBehaviour
         int i = Random.Range(0, availableRooms.Count);
         var spawnPoint = availableRooms[i];
 
-        Instantiate(heroPrefab, spawnPoint.center, Quaternion.identity);
+        GameObject heroClone = Instantiate(heroPrefab, spawnPoint.center, Quaternion.identity);
+        vCam.Follow = heroClone.transform;
         
     }
 
 
     private void DestroyObjects()
     {
-        foreach (GameObject o in GameObject.FindGameObjectsWithTag("Spawnable"))
+        foreach (GameObject o in GameObject.FindGameObjectsWithTag("Hero"))
         {
             Destroy(o);
         }

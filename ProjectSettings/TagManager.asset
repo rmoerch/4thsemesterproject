@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Hero
   - Enemy
+  - Spawnable
+  - Floor
+  - VirtualCamera
   layers:
   - Default
   - TransparentFX

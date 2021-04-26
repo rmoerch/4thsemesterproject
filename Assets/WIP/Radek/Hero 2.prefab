@@ -57,7 +57,12 @@ PrefabInstance:
     - target: {fileID: 595249596878364197, guid: 3156b246056c162469bd45703505659f,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595249596878364197, guid: 3156b246056c162469bd45703505659f,
+        type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 595249596878364198, guid: 3156b246056c162469bd45703505659f,
         type: 3}
@@ -117,7 +122,7 @@ PrefabInstance:
     - target: {fileID: 595249596878364249, guid: 3156b246056c162469bd45703505659f,
         type: 3}
       propertyPath: m_Name
-      value: Hero
+      value: Hero 2
       objectReference: {fileID: 0}
     - target: {fileID: 1607641098571854020, guid: 3156b246056c162469bd45703505659f,
         type: 3}
@@ -132,7 +137,7 @@ PrefabInstance:
     - target: {fileID: 1607641098571854021, guid: 3156b246056c162469bd45703505659f,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1607641098571854023, guid: 3156b246056c162469bd45703505659f,
         type: 3}
