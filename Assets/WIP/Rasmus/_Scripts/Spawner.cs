@@ -7,6 +7,8 @@ public class Spawner : MonoBehaviour
 {
     public RoomFirstDungeonGenerator dungeonGenerator;
     public GameObject heroPrefab;
+    public GameObject portal;
+    public List<BoundsInt> availableRooms;
     //public List<GameObject> objectsToSpawn;
     
 
@@ -23,7 +25,7 @@ public class Spawner : MonoBehaviour
         dungeonGenerator.GetComponent<RoomFirstDungeonGenerator>();
 
         //Spawn a hero in the center of a random room.
-        List<BoundsInt> availableRooms = new List<BoundsInt>();
+        availableRooms = new List<BoundsInt>();
         foreach (var room in dungeonGenerator.roomsList)
         {
             availableRooms.Add(room);
@@ -37,6 +39,22 @@ public class Spawner : MonoBehaviour
         
     }
 
+    public void PortalSpawn()
+    {
+        var hero = GameObject.FindGameObjectsWithTag("Player");
+
+        dungeonGenerator.GetComponent<RoomFirstDungeonGenerator>();
+        availableRooms = new List<BoundsInt>();
+
+        foreach (var room in dungeonGenerator.roomsList)
+        {
+            availableRooms.Add(room);
+        }
+        int i = Random.Range(0, availableRooms.Count);
+        var portalSpawnPoint = availableRooms[i];
+
+        
+    }
 
     private void DestroyObjects()
     {
