@@ -9095,6 +9095,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1418011052}
+        m_MethodName: PortalSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &592918925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30644,6 +30655,18 @@ MonoBehaviour:
   dungeonGenerator: {fileID: 355707127}
   heroPrefab: {fileID: 675128065991145428, guid: 06841374a4660bf4e9b5ec9c84295a0c,
     type: 3}
+  portal: {fileID: 4677487939449902783, guid: 5f678281b16b07145973f0a6bbf06935, type: 3}
+  availableRooms:
+  - m_Position: {x: 0, y: 0, z: 0}
+    m_Size: {x: 0, y: 0, z: 0}
+  - m_Position: {x: 0, y: 0, z: 0}
+    m_Size: {x: 0, y: 0, z: 0}
+  - m_Position: {x: 0, y: 0, z: 0}
+    m_Size: {x: 0, y: 0, z: 0}
+  - m_Position: {x: 0, y: 0, z: 0}
+    m_Size: {x: 0, y: 0, z: 0}
+  - m_Position: {x: 0, y: 0, z: 0}
+    m_Size: {x: 0, y: 0, z: 0}
 --- !u!4 &1418011053
 Transform:
   m_ObjectHideFlags: 0

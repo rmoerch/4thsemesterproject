@@ -15,6 +15,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         PlayerSpawn();
+        PortalSpawn();
     }
 
     public void PlayerSpawn()
@@ -41,18 +42,20 @@ public class Spawner : MonoBehaviour
 
     public void PortalSpawn()
     {
+        
         var hero = GameObject.FindGameObjectsWithTag("Player");
 
         dungeonGenerator.GetComponent<RoomFirstDungeonGenerator>();
         availableRooms = new List<BoundsInt>();
-
+        
         foreach (var room in dungeonGenerator.roomsList)
         {
             availableRooms.Add(room);
         }
         int i = Random.Range(0, availableRooms.Count);
         var portalSpawnPoint = availableRooms[i];
-
+        
+        Instantiate(portal, portalSpawnPoint.center, Quaternion.identity);
         
     }
 
@@ -61,6 +64,11 @@ public class Spawner : MonoBehaviour
         foreach (GameObject o in GameObject.FindGameObjectsWithTag("Hero"))
         {
             Destroy(o);
+        }
+
+        foreach (GameObject i in GameObject.FindGameObjectsWithTag("Spawnable"))
+        {
+            Destroy(i);
         }
     }
 
