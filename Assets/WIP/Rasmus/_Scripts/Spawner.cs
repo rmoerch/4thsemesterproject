@@ -63,7 +63,6 @@ public class Spawner : MonoBehaviour
         Instantiate(portal, portalSpawnPoint.center, Quaternion.identity);
         
     }
-    }
 
     public void EnemySpawnCenter()
     {
