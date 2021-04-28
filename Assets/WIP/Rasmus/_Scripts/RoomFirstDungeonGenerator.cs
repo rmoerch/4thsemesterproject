@@ -17,24 +17,21 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     private bool randomWalkRooms = false;
     public List<Vector2Int> roomCenters;
     public List<BoundsInt> roomsList;
+    public HashSet<Vector2Int> floor;
+    public HashSet<Vector2Int> globalFloorList;
 
+    
     protected override void RunProceduralGeneration()
     {
         CreateRooms();
-        
     }
-
-    
 
     //This method creates rooms using the Binary Space Partinioning algorithm
     private void CreateRooms()
     {
         roomsList = ProceduralGenerationAlgorithms.BinarySpacePartitioning(new BoundsInt((Vector3Int)startPosition,
             new Vector3Int(dungeonWidth, dungeonHeight, 0)), minRoomWidth, minRoomHeight);
-
-        HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
-        
-
+        floor = new HashSet<Vector2Int>();
         if (randomWalkRooms)
         {
             floor = CreateRoomsRandomly(roomsList);
@@ -43,7 +40,8 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         {
             floor = CreateSimpleRooms(roomsList);
         }
-
+        globalFloorList = new HashSet<Vector2Int>();
+        globalFloorList = floor;
         roomCenters = new List<Vector2Int>();
         foreach (var room in roomsList)
         {
@@ -58,8 +56,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 
     private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomsList)
     {
-        
-        HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
+        floor = new HashSet<Vector2Int>();
         for (int i = 0; i < roomsList.Count; i++)
         {
             var roomBounds = roomsList[i];

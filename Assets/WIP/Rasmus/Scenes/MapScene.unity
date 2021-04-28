@@ -9003,6 +9003,7 @@ GameObject:
   - component: {fileID: 592918926}
   - component: {fileID: 592918925}
   - component: {fileID: 592918924}
+  - component: {fileID: 592918927}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -9143,6 +9144,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592918922}
   m_CullTransparentMesh: 0
+--- !u!114 &592918927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592918922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e837cd41c8125fe49bc8769890197ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dungeonGenerator: {fileID: 355707127}
+  heroPrefab: {fileID: 675128065991145428, guid: 06841374a4660bf4e9b5ec9c84295a0c,
+    type: 3}
+  enemyPrefab: {fileID: 0}
+  spawner: []
+  availableRooms: []
 --- !u!1 &593426192
 GameObject:
   m_ObjectHideFlags: 3
@@ -30667,6 +30686,10 @@ MonoBehaviour:
     m_Size: {x: 0, y: 0, z: 0}
   - m_Position: {x: 0, y: 0, z: 0}
     m_Size: {x: 0, y: 0, z: 0}
+  enemyPrefab: {fileID: 3604303739231731826, guid: e6de72025d4052941b55d4d051a70942,
+    type: 3}
+  spawner: []
+  availableRooms: []
 --- !u!4 &1418011053
 Transform:
   m_ObjectHideFlags: 0
