@@ -20,7 +20,11 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     public HashSet<Vector2Int> floor;
     public HashSet<Vector2Int> globalFloorList;
 
-    
+    private void Start()
+    {
+        RunProceduralGeneration();
+    }
+
     protected override void RunProceduralGeneration()
     {
         CreateRooms();

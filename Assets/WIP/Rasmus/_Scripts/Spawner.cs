@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         PlayerSpawn();
-        EnemySpawnCenter();
+        //EnemySpawnCenter();
         EnemySpawnRandom();
         PortalSpawn();
     }
@@ -42,7 +42,15 @@ public class Spawner : MonoBehaviour
         availableRooms.RemoveAt(i);
         GameObject heroClone = Instantiate(heroPrefab, spawnPoint.center, Quaternion.identity);
         vCam.Follow = heroClone.transform;
-        
+        heroClone.GetComponent<BrackeysMoving>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        heroClone.GetComponentInChildren<BrackeysMoving>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        Component[] co = heroClone.GetComponentsInChildren<BrackeysMoving>();
+        foreach (var item in co)
+        {
+            item.GetComponent<BrackeysMoving>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        }
+
+        heroClone.GetComponentInChildren<FirePointRotation>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
     public void PortalSpawn()
@@ -50,8 +58,8 @@ public class Spawner : MonoBehaviour
         
         var hero = GameObject.FindGameObjectsWithTag("Player");
 
-        dungeonGenerator.GetComponent<RoomFirstDungeonGenerator>();
-        availableRooms = new List<BoundsInt>();
+        //dungeonGenerator.GetComponent<RoomFirstDungeonGenerator>();
+        //availableRooms = new List<BoundsInt>();
         
         foreach (var room in dungeonGenerator.roomsList)
         {
@@ -59,7 +67,7 @@ public class Spawner : MonoBehaviour
         }
         int i = Random.Range(0, availableRooms.Count);
         var portalSpawnPoint = availableRooms[i];
-        
+        availableRooms.RemoveAt(i);
         Instantiate(portal, portalSpawnPoint.center, Quaternion.identity);
         
     }
@@ -87,9 +95,15 @@ public class Spawner : MonoBehaviour
         foreach (var room in randomFloorTilesList)    
         {
             Debug.Log("Spawning randomly" + room);
-            int i = Random.Range(0, randomFloorTilesList.Count);
-            Vector2Int spawnpoint = randomFloorTilesList[i];
-            Instantiate(enemyPrefab, new Vector3(spawnpoint.x, spawnpoint.y, 0), Quaternion.identity);
+            if (Random.Range(0, 70) == 1)
+            {
+                int i = Random.Range(0, randomFloorTilesList.Count);
+                Vector2Int spawnpoint = randomFloorTilesList[i];
+                Instantiate(enemyPrefab, new Vector3(spawnpoint.x, spawnpoint.y, 0), Quaternion.identity);
+            }
+            //int i = Random.Range(0, randomFloorTilesList.Count);
+            //Vector2Int spawnpoint = randomFloorTilesList[i];
+            //Instantiate(enemyPrefab, new Vector3(spawnpoint.x, spawnpoint.y, 0), Quaternion.identity);
         }
 
 
