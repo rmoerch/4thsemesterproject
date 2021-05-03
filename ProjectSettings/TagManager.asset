@@ -9,6 +9,8 @@ TagManager:
   - Spawnable
   - Floor
   - VirtualCamera
+  - EnemyHitBox
+  - TileMapObject
   - Wall
   layers:
   - Default

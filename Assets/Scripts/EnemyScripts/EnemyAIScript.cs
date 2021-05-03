@@ -5,7 +5,8 @@ using Pathfinding;
 
 public class EnemyAIScript : MonoBehaviour
 {
-    public Transform target;
+    public Transform targetTransform;
+    private Vector3 target;
     public Animator animator;
 
     [SerializeField]
@@ -25,15 +26,18 @@ public class EnemyAIScript : MonoBehaviour
     Vector2 direction = Vector2.zero;
 
     Seeker seeker;
-    Rigidbody2D rb;
+    Rigidbody2D enemyRb;
 
 
 
     private void Start()
     {
+        //The target vector equals vector.y - 1, so the enemy would go to hero legs (legs are actual center of the hero), not center
+        target = targetTransform.position;
+        target.y -= 1;
         seeker = GetComponent<Seeker>();
-        rb = GetComponent<Rigidbody2D>();
-
+        enemyRb = GetComponent<Rigidbody2D>();
+        
         
         //Invoke function every .5 a second
         InvokeRepeating("UpdatePath", 0f, .2f);
@@ -42,8 +46,11 @@ public class EnemyAIScript : MonoBehaviour
     //Generate a new path function
     void UpdatePath()
     {
+        //The target vector equals vector.y - 1, so the enemy would go to hero legs (legs are actual center of the hero), not center
+        target = targetTransform.position;
+        target.y -= 1;
         //If target is further then the disableEnemyDistance, make sure to check that it hasn't reachedEndOfPath
-        if (minimumEnemyProximity < Vector2.Distance(rb.position, target.position ) && maximumEnemyProximity > Vector2.Distance(rb.position, target.position))
+        if (minimumEnemyProximity < Vector2.Distance(enemyRb.position, target ) && maximumEnemyProximity > Vector2.Distance(enemyRb.position, target))
         {
             reachedEndOfPath = false;
         }
@@ -54,7 +61,7 @@ public class EnemyAIScript : MonoBehaviour
         else {
             if (seeker.IsDone())
             {
-                seeker.StartPath(rb.position, target.position, OnPathComplete);
+                seeker.StartPath(enemyRb.position, target, OnPathComplete);
             }
         }
     }
@@ -86,7 +93,7 @@ public class EnemyAIScript : MonoBehaviour
         else if (direction.y == 0 && direction.x < 0) { lastDirection = 6f; }
         else if (direction.y < 0 && direction.x < 0) { lastDirection = 7f; }
 
-        Vector2 moveDirection = rb.velocity.normalized;
+        Vector2 moveDirection = enemyRb.velocity.normalized;
         //Send information to animator in Unity
         animator.SetFloat("Horizontal", moveDirection.x);
         animator.SetFloat("Vertical", moveDirection.y);
@@ -95,10 +102,10 @@ public class EnemyAIScript : MonoBehaviour
 
 
         //Stop the enemy from moving if: minimum/maximum EnemyProximity has been reached, or the last Waypoint has been reached
-        if (minimumEnemyProximity >= Vector2.Distance(rb.position, target.position) || maximumEnemyProximity <= Vector2.Distance(rb.position, target.position) || currentWaypoint >= path.vectorPath.Count)
+        if (minimumEnemyProximity >= Vector2.Distance(enemyRb.position, target) || maximumEnemyProximity <= Vector2.Distance(enemyRb.position, target) || currentWaypoint >= path.vectorPath.Count)
         {
             //Stop the movement of enemy rigidBody
-            rb.velocity = Vector2.zero;
+            enemyRb.velocity = Vector2.zero;
 
             reachedEndOfPath = true;
             return;
@@ -109,13 +116,13 @@ public class EnemyAIScript : MonoBehaviour
         }
 
         //Update a Vector2 containg a direction of current move
-        direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+        direction = ((Vector2)path.vectorPath[currentWaypoint] - enemyRb.position).normalized;
 
         //Add a force to move a rigidBody
         Vector2 force = direction * speed * Time.deltaTime;
-        rb.AddForce(force);
+        enemyRb.AddForce(force);
 
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+        float distance = Vector2.Distance(enemyRb.position, path.vectorPath[currentWaypoint]);
         if(distance < nextWaypointDistance)
         {
             currentWaypoint++;

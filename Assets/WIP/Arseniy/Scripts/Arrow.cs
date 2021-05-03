@@ -5,20 +5,21 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     public GameObject hitEffect;
+    public float bulletForce;
 
     private void Start()
     {
-        GameObject hero = GameObject.FindGameObjectWithTag("Hero");
-        Physics2D.IgnoreCollision(hero.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("Hero")) { return; }
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, 0.5f);
         Destroy(gameObject);
-        if(collision.gameObject.CompareTag("Enemy"))
+        if(collision.gameObject.CompareTag("EnemyHitBox"))
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponentInParent<EnemyHP>().LoseHP(20);
+            collision.gameObject.GetComponentInParent<Rigidbody2D>().AddForce(gameObject.transform.up * bulletForce, ForceMode2D.Impulse);
         }
     }
 
