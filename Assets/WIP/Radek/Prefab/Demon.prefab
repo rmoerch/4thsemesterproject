@@ -321,6 +321,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8310660165276700862}
     m_Modifications:
+    - target: {fileID: 5251412434112278658, guid: b4534393a01d7384eac00c5681d4a9a9,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1179366265
+      objectReference: {fileID: 0}
     - target: {fileID: 5251412434112278659, guid: b4534393a01d7384eac00c5681d4a9a9,
         type: 3}
       propertyPath: m_Pivot.x

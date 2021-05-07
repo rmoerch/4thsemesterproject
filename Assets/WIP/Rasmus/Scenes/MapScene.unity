@@ -21586,7 +21586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dungeonGenerator: {fileID: 355707127}
-  heroPrefab: {fileID: 2538558681251546872, guid: e14f5d54fad131b44a27a798e6cb3606,
+  heroPrefab: {fileID: 6632378046319575289, guid: 4974e8dfaba6bc046a11f5322c383cd6,
     type: 3}
   enemyPrefab: {fileID: 8310660165276700860, guid: 0e2e7c7fd1ace6d469e2325beaed5ad2,
     type: 3}

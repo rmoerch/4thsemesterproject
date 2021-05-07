@@ -42,15 +42,8 @@ public class Spawner : MonoBehaviour
         availableRooms.RemoveAt(i);
         GameObject heroClone = Instantiate(heroPrefab, spawnPoint.center, Quaternion.identity);
         vCam.Follow = heroClone.transform;
-        heroClone.GetComponent<BrackeysMoving>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        heroClone.GetComponentInChildren<BrackeysMoving>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        Component[] co = heroClone.GetComponentsInChildren<BrackeysMoving>();
-        foreach (var item in co)
-        {
-            item.GetComponent<BrackeysMoving>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        }
-
-        heroClone.GetComponentInChildren<FirePointRotation>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        heroClone.GetComponent<PlayerMovement>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        heroClone.GetComponentInChildren<BlasterRotation>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
     public void PortalSpawn()
