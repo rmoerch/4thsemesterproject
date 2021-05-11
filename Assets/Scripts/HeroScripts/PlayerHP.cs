@@ -22,8 +22,6 @@ public class PlayerHP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        deathMenu = transform.Find("/Canvas/DeathMenu").gameObject;
-        deathMenu.SetActive(false);
         hP = maxHP;
         healthBar.StartHealthBar(maxHP);
     }
@@ -33,7 +31,6 @@ public class PlayerHP : MonoBehaviour
         if(hitCooldown <= 0)
         {
             hP -= damage;
-            Debug.Log(hP);
             healthBar.SetHealth(hP);
             hitCooldown = hitCooldownTime;
             CheckIfGameOver();
@@ -44,30 +41,17 @@ public class PlayerHP : MonoBehaviour
     {
         hitCooldown--;
     }
-    private void Restart()
-    {
-        Debug.Log("lesss go");
-        //Load the last scene loaded, in this case Main, the only scene in the game.
-        //deathMenu = GameObject.Find("/Canvas/DeathMenu");
-        Debug.Log(deathMenu);
-        deathMenu.SetActive(true);
-        enabled = false;
-    }
+
     private void CheckIfGameOver()
     {
         if (hP <= 0)
         {
-            //Debug.Log("You died.");
+            //I guess we should call game manager to do its work at this point.
+            //After death we save hero prefab, load GameOver scene
+            //Inside GameOver scene, upon clicking PlayAgain, we pass saved hero prefab to spawner class
 
-            //try
-            //{
-            //    hero = spawner.heroClone;
-            //    DontDestroyOnLoad(hero);
-            //} catch
-            //{
-            //    Debug.Log(hero);
-            //}
-            Invoke("Restart", 1f);
+            //gameManager.SaveGame();
+            SceneManager.LoadScene(3);
         }
         hitCooldown--;
     }

@@ -9431,7 +9431,6 @@ MonoBehaviour:
   spawner: []
   availableRooms: []
   portal: {fileID: 0}
-  heroClone: {fileID: 0}
 --- !u!1 &593426192
 GameObject:
   m_ObjectHideFlags: 3
@@ -21991,7 +21990,6 @@ MonoBehaviour:
   spawner: []
   availableRooms: []
   portal: {fileID: 4677487939449902783, guid: 5f678281b16b07145973f0a6bbf06935, type: 3}
-  heroClone: {fileID: 0}
 --- !u!4 &1418011053
 Transform:
   m_ObjectHideFlags: 0
@@ -29095,7 +29093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1887347971
 RectTransform:
   m_ObjectHideFlags: 0
