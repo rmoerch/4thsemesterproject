@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: adc763a9a072849499731c556e9168ec
   - enabled: 1
-    path: Assets/WIP/Rasmus/Scenes/MapScene.unity
+    path: Assets/Scenes/MapScene.unity
     guid: 80ff7d4d1fc0e784ba227c2629486a19
   - enabled: 1
     path: Assets/WIP/Radek/BossRoomScene.unity
