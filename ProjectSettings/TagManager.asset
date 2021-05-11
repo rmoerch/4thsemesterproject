@@ -12,6 +12,7 @@ TagManager:
   - EnemyHitBox
   - TileMapObject
   - Wall
+  - DeathMenu
   layers:
   - Default
   - TransparentFX

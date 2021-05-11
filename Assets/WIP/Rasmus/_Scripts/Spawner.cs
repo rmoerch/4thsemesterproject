@@ -14,6 +14,7 @@ public class Spawner : MonoBehaviour
     public HashSet<BoundsInt> randomFloorTilesList1;
     Collision collision;
     public GameObject portal;
+    private GameObject heroClone;
     //public List<GameObject> objectsToSpawn;
 
 
@@ -40,7 +41,7 @@ public class Spawner : MonoBehaviour
         int i = Random.Range(0, availableRooms.Count);
         var spawnPoint = availableRooms[i];
         availableRooms.RemoveAt(i);
-        GameObject heroClone = Instantiate(heroPrefab, spawnPoint.center, Quaternion.identity);
+        heroClone = Instantiate(heroPrefab, spawnPoint.center, Quaternion.identity);
         vCam.Follow = heroClone.transform;
         heroClone.GetComponent<PlayerMovement>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         heroClone.GetComponentInChildren<BlasterRotation>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
