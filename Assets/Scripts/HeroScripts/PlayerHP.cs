@@ -26,6 +26,16 @@ public class PlayerHP : MonoBehaviour
         healthBar.StartHealthBar(maxHP);
     }
 
+    public void GetHP(float health)
+    {
+        if (health < 100)
+        {
+            hP += health;
+            healthBar.SetHealth(hP);
+        }
+        
+    }
+
     public void LoseHP(float damage)
     {
         if(hitCooldown <= 0)
@@ -55,4 +65,5 @@ public class PlayerHP : MonoBehaviour
         }
         hitCooldown--;
     }
+
 }
