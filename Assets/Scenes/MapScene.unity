@@ -9429,6 +9429,7 @@ MonoBehaviour:
   spawner: []
   availableRooms: []
   portal: {fileID: 0}
+  potion: {fileID: 0}
 --- !u!1 &593426192
 GameObject:
   m_ObjectHideFlags: 3
@@ -21825,6 +21826,7 @@ MonoBehaviour:
   spawner: []
   availableRooms: []
   portal: {fileID: 4677487939449902783, guid: 5f678281b16b07145973f0a6bbf06935, type: 3}
+  potion: {fileID: 4784808599819303601, guid: fbf7ebedf30fe464086bfb0c19e50504, type: 3}
 --- !u!4 &1418011053
 Transform:
   m_ObjectHideFlags: 0
