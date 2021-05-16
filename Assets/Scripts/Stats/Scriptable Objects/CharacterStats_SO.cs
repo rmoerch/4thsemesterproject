@@ -14,10 +14,14 @@ public class CharacterStats_SO : ScriptableObject
     public ItemPickUp healthPotion { get; private set; }
     public ItemPickUp weapon { get; private set; }
     public ItemPickUp misc1 { get; private set; }
+    public ItemPickUp ammo { get; private set; }
 
 
     public int maxHealth = 0;
     public int currentHealth = 0;
+
+    public int maxAmmo = 0;
+    public int currentAmmo = 0;
 
     //public int maxGold = 0;
     public int currentGold = 0;
@@ -68,6 +72,14 @@ public class CharacterStats_SO : ScriptableObject
         currentSpeed += speedAmount;
     }
 
+    public void EquipWeapon(ItemPickUp weaponPickUp, CharacterInventory charInventory, GameObject weaponSlot)
+    {
+        weapon = weaponPickUp;
+        currentDamage = baseDamage + weapon.itemDefinition.itemAmount;
+    }
+
+    
+
     #endregion
 
     #region Stat Reducers
@@ -86,6 +98,11 @@ public class CharacterStats_SO : ScriptableObject
         currentGold -= amount;
     }
 
+    public void UseAmmo(int amount)
+    {
+        currentAmmo -= amount;
+    }
+
     public void ArmorDebuff(int amount)
     {
         currentArmor -= amount;
@@ -95,6 +112,25 @@ public class CharacterStats_SO : ScriptableObject
     {
         currentSpeed -= amount;
     }
+
+    public bool UnEquipWeapon(ItemPickUp weaponPickup, CharacterInventory charInventory, GameObject weaponSlot)
+    {
+        bool previousWeaponSame = false;
+
+        if(weapon != null)
+        {
+            if(weapon == weaponPickup)
+            {
+                previousWeaponSame = true;
+            }
+            Destroy(weaponSlot.transform.GetChild(0).gameObject);
+            weapon = null;
+            currentDamage = baseDamage;
+        }
+        return previousWeaponSame;
+    }
+
+
     #endregion
 
     #region Character Death
@@ -105,5 +141,20 @@ public class CharacterStats_SO : ScriptableObject
         //Death state and trigger respawn
     }
 
+    private void LevelUp()
+    {
+        Debug.Log("You've gained a level!");
+        //Maybe we need this?
+    }
+
+    #endregion
+
+    #region SaveCharacterData
+
+    public void saveCharacterData()
+    {
+        //saveDataOnClose = true;
+        //EditorUtility.SetDirty(this);
+    }
     #endregion
 }
