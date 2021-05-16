@@ -12296,6 +12296,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4021985855975414406, guid: 4974e8dfaba6bc046a11f5322c383cd6,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1250660390}
     - target: {fileID: 4021985857125125746, guid: 4974e8dfaba6bc046a11f5322c383cd6,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -12311,16 +12316,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1250660390}
-    - target: {fileID: 6632378046319575173, guid: 4974e8dfaba6bc046a11f5322c383cd6,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632378046319575173, guid: 4974e8dfaba6bc046a11f5322c383cd6,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1179366265
-      objectReference: {fileID: 0}
     - target: {fileID: 6632378046319575174, guid: 4974e8dfaba6bc046a11f5322c383cd6,
         type: 3}
       propertyPath: m_RootOrder
@@ -12375,11 +12370,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632378046319575271, guid: 4974e8dfaba6bc046a11f5322c383cd6,
-        type: 3}
-      propertyPath: offset
-      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 6632378046319575289, guid: 4974e8dfaba6bc046a11f5322c383cd6,
         type: 3}
