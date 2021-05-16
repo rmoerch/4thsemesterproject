@@ -16,6 +16,7 @@ public class Spawner : MonoBehaviour
     Collision collision;
     public GameObject portal;
     private GameObject heroClone;
+    public GameObject potion;
     //public List<GameObject> objectsToSpawn;
 
 
@@ -26,6 +27,7 @@ public class Spawner : MonoBehaviour
         //EnemySpawnCenter();
         EnemySpawnRandom();
         PortalSpawn();
+        PotionSpawn();
     }
 
     public GameObject GetHero()
@@ -63,16 +65,27 @@ public class Spawner : MonoBehaviour
         //dungeonGenerator.GetComponent<RoomFirstDungeonGenerator>();
         //availableRooms = new List<BoundsInt>();
         
-        foreach (var room in dungeonGenerator.roomsList)
+        foreach (var room in availableRooms)
         {
-            availableRooms.Add(room);
+            var spawnpoint = room;
+            
         }
         int i = Random.Range(0, availableRooms.Count);
         var portalSpawnPoint = availableRooms[i];
         availableRooms.RemoveAt(i);
         Instantiate(portal, portalSpawnPoint.center, Quaternion.identity);
-        
+
     }
+
+    public void PotionSpawn()
+    {
+        foreach (var room in availableRooms)
+        {
+            var spawnpoint = room;
+            Instantiate(potion, spawnpoint.center, Quaternion.identity);
+        }
+    }
+
 
     public void EnemySpawnCenter()
     {

@@ -25,7 +25,7 @@ TagManager:
   - AICollisionMap
   - Bullets
   - Player
-  - 
+  - Interactable
   - 
   - 
   - 
@@ -64,6 +64,9 @@ TagManager:
     locked: 0
   - name: Agents
     uniqueID: 1179366265
+    locked: 0
+  - name: Interactables
+    uniqueID: 3317120449
     locked: 0
   - name: Foreground
     uniqueID: 618695207
