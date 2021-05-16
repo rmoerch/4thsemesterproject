@@ -28,6 +28,9 @@ public class Spawner : MonoBehaviour
         EnemySpawnRandom();
         PortalSpawn();
         PotionSpawn();
+
+        //Update the AI Map after 1sec when everything is generated
+        Invoke("UpdateAIMap", 1);
     }
 
     public GameObject GetHero()
@@ -143,6 +146,10 @@ public class Spawner : MonoBehaviour
         //Instantiate(enemyPrefab, spawnPoint.center, Quaternion.identity);
     }
 
+    private void UpdateAIMap()
+    {
+        AstarPath.active.Scan();
+    }
 
     private void DestroyObjects()
     {

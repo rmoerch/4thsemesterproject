@@ -32,9 +32,7 @@ public class EnemyAIScript : MonoBehaviour
 
     private void Start()
     {
-        //The target vector equals vector.y - 1, so the enemy would go to hero legs (legs are actual center of the hero), not center
-        target = targetTransform.position;
-        target.y -= 1;
+        UpdateTarget();
         seeker = GetComponent<Seeker>();
         enemyRb = GetComponent<Rigidbody2D>();
         
@@ -43,12 +41,20 @@ public class EnemyAIScript : MonoBehaviour
         InvokeRepeating("UpdatePath", 0f, .2f);
     }
 
-    //Generate a new path function
-    void UpdatePath()
+    private void UpdateTarget()
     {
+        targetTransform = GameObject.FindGameObjectsWithTag("Hero")[0].transform;
+
         //The target vector equals vector.y - 1, so the enemy would go to hero legs (legs are actual center of the hero), not center
         target = targetTransform.position;
         target.y -= 1;
+    }
+
+    //Generate a new path function
+    private void UpdatePath()
+    {
+        UpdateTarget();
+
         //If target is further then the disableEnemyDistance, make sure to check that it hasn't reachedEndOfPath
         if (minimumEnemyProximity < Vector2.Distance(enemyRb.position, target ) && maximumEnemyProximity > Vector2.Distance(enemyRb.position, target))
         {

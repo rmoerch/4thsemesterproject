@@ -28,7 +28,7 @@ public class GunAmmo : MonoBehaviour
     public bool Shoot()
     {
         //If magazine ammo is empty
-        if(magazineAmmo <= 0)
+        if (magazineAmmo <= 0)
         {
             //if all ammo is out - can't reaload, can't shoot
             if(allAmmo <= 0) { return false; }
