@@ -4,39 +4,21 @@ using UnityEngine;
 
 public class PlayerShootingScript : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject bulletPrefab;
+    public GameObject bulletPrefab;
 
-    [SerializeField]
-    private float shootCooldownTime = 20f;
-    private float shootCooldown;
+    public float bulletForce = 20f;
 
-    [SerializeField]
-    private float bulletForce = 20f;
-
-    private void Start()
-    {
-        shootCooldownTime = shootCooldownTime * Time.deltaTime;
-    }
     // Update is called once per frame
     void Update()
     {
-        if (shootCooldown <= 0)
+        if (Input.GetButtonDown("Fire1"))
         {
-            if (Input.GetButton("Fire1"))
-            {
-                Shoot();
-                shootCooldown = shootCooldownTime;
-            }
+            Shoot();
         }
-        else if (shootCooldown > 0){ shootCooldown = shootCooldown - 1 * Time.deltaTime ; }
     }
 
     void Shoot()
     {
-        //if heroAmmo.Shoot returns false - no ammo to shoot - don't shoot
-        if (!gameObject.GetComponent<GunAmmo>().Shoot()) { return; }
-
         //Point 0 of bullet instantiation
         Vector3 position = (Vector3)gameObject.GetComponent<Rigidbody2D>().position;
 
