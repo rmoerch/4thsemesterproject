@@ -12,27 +12,29 @@ public class MainMenu : MonoBehaviour
     private void Awake()
     {
         gM = GameManager.instance;
-        gM.OnStateChange += HandleOnStateChange;
-        Debug.Log("Current game state when Awakes: " + gM.gameState);
+        //gM.OnStateChange += HandleOnStateChange;
+        //Debug.Log("Current game state when Awakes: " + gM.gameState);
     }
 
     //test current game state
-    private void Start()
-    {
-        Debug.Log("Current game state when Starts: " + gM.gameState);
-        gM.SetGameState(GameState.MainMenu);
-    }
+    //private void Start()
+    //{
+    //    Debug.Log("Current game state when Starts: " + gM.gameState);
+    //    gM.SetGameState(GameState.MainMenu);
+    //}
 
-    //set the OnStateChange event, when changing scenes
-    public void HandleOnStateChange()
-    {
-        Debug.Log("Handling state change to: " + gM.gameState);
-    }
+    ////set the OnStateChange event, when changing scenes
+    //public void HandleOnStateChange()
+    //{
+    //    Debug.Log("Handling state change to: " + gM.gameState);
+    //}
 
 
 
     //Above new code for checking game states, doesnt seem to work atm
+
     //-------------------------------------------
+
     //Below is original main menu code
     //These things dont conflict and dont break the game so i guess it is ok
 

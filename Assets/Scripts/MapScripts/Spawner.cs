@@ -7,7 +7,8 @@ using System.Linq;
 public class Spawner : MonoBehaviour
 {
     public RoomFirstDungeonGenerator dungeonGenerator;
-    public GameObject heroPrefab;
+    //public GameObject heroPrefab;
+    private GameManager gM;
     public GameObject enemyPrefab;
     public List<BoundsInt> spawner;
     public List<BoundsInt> availableRooms;
@@ -20,10 +21,16 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
+        gM = GameManager.instance;
         PlayerSpawn();
         //EnemySpawnCenter();
         EnemySpawnRandom();
         PortalSpawn();
+    }
+
+    public GameObject GetHero()
+    {
+        return heroClone;
     }
 
     public void PlayerSpawn()
@@ -41,11 +48,12 @@ public class Spawner : MonoBehaviour
         int i = Random.Range(0, availableRooms.Count);
         var spawnPoint = availableRooms[i];
         availableRooms.RemoveAt(i);
-        heroClone = Instantiate(heroPrefab, spawnPoint.center, Quaternion.identity);
+        heroClone = Instantiate(gM.heroPrefab, spawnPoint.center, Quaternion.identity);
         vCam.Follow = heroClone.transform;
         heroClone.GetComponent<PlayerMovement>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         heroClone.GetComponentInChildren<BlasterRotation>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
+
 
     public void PortalSpawn()
     {

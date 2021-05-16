@@ -10,10 +10,7 @@ public class PlayerHP : MonoBehaviour
     [SerializeField]
     HealthBarScript healthBar;
     float hP;
-    Spawner spawner;
-    private GameObject deathMenu;
-    public GameObject hero;
-
+    private Spawner sp;
     //Cooldown for a hit - Player cannot be hit within hitCooldown time
     private int hitCooldown = 0;
     [SerializeField]
@@ -51,6 +48,7 @@ public class PlayerHP : MonoBehaviour
             //Inside GameOver scene, upon clicking PlayAgain, we pass saved hero prefab to spawner class
 
             //gameManager.SaveGame();
+            //GameManager.instance.heroPrefab = sp.GetHero();
             SceneManager.LoadScene(3);
         }
         hitCooldown--;

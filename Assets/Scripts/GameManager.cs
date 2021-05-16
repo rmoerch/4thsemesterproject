@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 	public event OnStateChangeHandler OnStateChange;
 	public GameState gameState { get; private set; }
 
+    public GameObject heroPrefab;
+
     //public static GameManager Instance
     //{
     //	get
@@ -26,6 +28,7 @@ public class GameManager : MonoBehaviour
     //	}
 
     //}
+
 
     private void Awake()
     {
@@ -44,11 +47,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetGameState(GameState state)
-	{
-		this.gameState = state;
-		OnStateChange();
-	}
+    //public void SetGameState(GameState state)
+	//{
+	//	this.gameState = state;
+	//	OnStateChange();
+	//}
 
 	public void OnApplicationQuit()
 	{
