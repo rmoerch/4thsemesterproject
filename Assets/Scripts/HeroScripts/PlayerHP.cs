@@ -25,7 +25,7 @@ public class PlayerHP : MonoBehaviour
 
     public void GetHP(float health)
     {
-        if (health < 100)
+        if (hP < 100)
         {
             hP += health;
             healthBar.SetHealth(hP);

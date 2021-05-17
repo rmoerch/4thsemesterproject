@@ -213,6 +213,8 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7805023065341288980}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+=======
 --- !u!1001 &342033038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -225,20 +227,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: CM vcam2
       objectReference: {fileID: 0}
+    - target: {fileID: 1921296600484629014, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
         type: 3}
@@ -280,8 +287,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1921296600484629017, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
+        type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98224943c2b0d1446ab22a2bdd9fcbe3, type: 3}
+>>>>>>> Stashed changes
 --- !u!4 &541260803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3604303739231731827, guid: e6de72025d4052941b55d4d051a70942,
@@ -11584,7 +11597,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1998493641
 MonoBehaviour:
