@@ -445,7 +445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allAmmoText: {fileID: 1344641000}
   magazineAmmoText: {fileID: 399782651}
-  magazineSize: 21
+  magazineSize: 60
 --- !u!114 &4757857173037051541
 MonoBehaviour:
   m_ObjectHideFlags: 0

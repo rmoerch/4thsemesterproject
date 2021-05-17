@@ -14,6 +14,8 @@ public class GunAmmo : MonoBehaviour
 
     private int allAmmo;
     private int magazineAmmo;
+
+    private bool isReloading;
     
 
     // Start is called before the first frame update
@@ -49,11 +51,14 @@ public class GunAmmo : MonoBehaviour
     {
         //If magazine is full - don't reload
         if(magazineAmmo == magazineSize) { return; }
+        //If already reloading - don't reload
+        if(isReloading) { return; }
 
         else if(allAmmo <= 0) { return; }
 
         else
         {
+            isReloading = true;
             //Reload gun after 3 sec
             Invoke("ReloadGun", 3);
         }
@@ -76,6 +81,7 @@ public class GunAmmo : MonoBehaviour
             allAmmo = 0;
             updateUI();
         }
+        isReloading = false;
     }
 
     private void updateUI()

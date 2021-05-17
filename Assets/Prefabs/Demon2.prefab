@@ -238,7 +238,7 @@ MonoBehaviour:
   animator: {fileID: 914145081056035270}
   nextWaypointDistance: 1
   speed: 400
-  minimumEnemyProximity: 1.1
+  minimumEnemyProximity: 1.2
   maximumEnemyProximity: 20
   jumpCooldownTime: 150
   jumpProximity: 8

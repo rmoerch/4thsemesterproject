@@ -30,6 +30,7 @@ public class Enemy2AIScript : MonoBehaviour
     Vector2 direction = Vector2.zero;
 
     Seeker seeker;
+    Vector2 enemyPosition;
     Rigidbody2D enemyRb;
 
 
@@ -37,21 +38,32 @@ public class Enemy2AIScript : MonoBehaviour
     private void Start()
     {
         seeker = GetComponent<Seeker>();
+        enemyPosition = GetComponent<CircleCollider2D>().bounds.center;
         enemyRb = GetComponent<Rigidbody2D>();
 
-        
+
         //Invoke function every .5 a second
         InvokeRepeating("UpdatePath", 0f, .2f);
+    }
+
+    private void UpdateTarget()
+    {
+        targetTransform = GameObject.FindGameObjectsWithTag("Hero")[0].transform;
+
+        //The target vector equals vector.y - 1, so the enemy would go to hero legs (legs are actual center of the hero), not center
+        target = targetTransform.position;
+        target.y -= 1;
     }
 
     //Generate a new path function
     void UpdatePath()
     {
-        //The target vector equals vector.y - 1, so the enemy would go to hero legs (legs are actual center of the hero), not center
-        target = targetTransform.position;
-        target.y -= 1;
+        UpdateTarget();
+        //Update the position of the center of CircleCollider2D of a Deamon
+        enemyPosition = GetComponent<CircleCollider2D>().bounds.center;
+
         //If target is further then the disableEnemyDistance, make sure to check that it hasn't reachedEndOfPath
-        if (minimumEnemyProximity < Vector2.Distance(enemyRb.position, target) && maximumEnemyProximity > Vector2.Distance(enemyRb.position, target))
+        if (minimumEnemyProximity < Vector2.Distance(enemyPosition, target) && maximumEnemyProximity > Vector2.Distance(enemyPosition, target))
         {
             reachedEndOfPath = false;
         }
@@ -64,7 +76,7 @@ public class Enemy2AIScript : MonoBehaviour
         {
             if (seeker.IsDone())
             {
-                seeker.StartPath(enemyRb.position, target, OnPathComplete);
+                seeker.StartPath(enemyPosition, target, OnPathComplete);
             }
         }
     }
@@ -105,7 +117,7 @@ public class Enemy2AIScript : MonoBehaviour
 
 
         //Stop the enemy from moving if: minimum/maximum EnemyProximity has been reached, or the last Waypoint has been reached
-        if (minimumEnemyProximity >= Vector2.Distance(enemyRb.position, target) || maximumEnemyProximity <= Vector2.Distance(enemyRb.position, target) || currentWaypoint >= path.vectorPath.Count)
+        if (minimumEnemyProximity >= Vector2.Distance(enemyPosition, target) || maximumEnemyProximity <= Vector2.Distance(enemyPosition, target) || currentWaypoint >= path.vectorPath.Count)
         {
             //Stop the movement of enemy rigidBody
             enemyRb.velocity = Vector2.zero;
@@ -119,7 +131,7 @@ public class Enemy2AIScript : MonoBehaviour
         }
 
         //Update a Vector2 containg a direction of current move
-        direction = ((Vector2)path.vectorPath[currentWaypoint] - enemyRb.position).normalized;
+        direction = ((Vector2)path.vectorPath[currentWaypoint] - enemyPosition).normalized;
 
         //Add a force to move a rigidBody
         Vector2 force = direction * speed * Time.deltaTime;
@@ -129,12 +141,12 @@ public class Enemy2AIScript : MonoBehaviour
         if (Vector2.Distance(enemyRb.position, target) <= jumpProximity && jumpCooldown <= 0)
         {
             jumpCooldown = jumpCooldownTime;
-            Vector2 jumpDirection = (Vector2)target - enemyRb.position;
+            Vector2 jumpDirection = (Vector2)target - enemyPosition;
             force = jumpDirection * speed * 10 * Time.deltaTime;
             enemyRb.AddForce(force);
         }
 
-        float distance = Vector2.Distance(enemyRb.position, path.vectorPath[currentWaypoint]);
+        float distance = Vector2.Distance(enemyPosition, path.vectorPath[currentWaypoint]);
         if(distance < nextWaypointDistance)
         {
             currentWaypoint++;

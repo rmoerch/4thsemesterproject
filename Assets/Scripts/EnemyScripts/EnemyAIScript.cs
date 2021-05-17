@@ -26,6 +26,7 @@ public class EnemyAIScript : MonoBehaviour
     Vector2 direction = Vector2.zero;
 
     Seeker seeker;
+    Vector2 enemyPosition;
     Rigidbody2D enemyRb;
 
 
@@ -34,6 +35,7 @@ public class EnemyAIScript : MonoBehaviour
     {
         UpdateTarget();
         seeker = GetComponent<Seeker>();
+        enemyPosition = GetComponent<CircleCollider2D>().bounds.center;
         enemyRb = GetComponent<Rigidbody2D>();
         
         
@@ -54,9 +56,10 @@ public class EnemyAIScript : MonoBehaviour
     private void UpdatePath()
     {
         UpdateTarget();
+        enemyPosition = GetComponent<CircleCollider2D>().bounds.center;
 
         //If target is further then the disableEnemyDistance, make sure to check that it hasn't reachedEndOfPath
-        if (minimumEnemyProximity < Vector2.Distance(enemyRb.position, target ) && maximumEnemyProximity > Vector2.Distance(enemyRb.position, target))
+        if (minimumEnemyProximity < Vector2.Distance(enemyPosition, target ) && maximumEnemyProximity > Vector2.Distance(enemyPosition, target))
         {
             reachedEndOfPath = false;
         }
@@ -67,7 +70,7 @@ public class EnemyAIScript : MonoBehaviour
         else {
             if (seeker.IsDone())
             {
-                seeker.StartPath(enemyRb.position, target, OnPathComplete);
+                seeker.StartPath(enemyPosition, target, OnPathComplete);
             }
         }
     }
@@ -108,7 +111,7 @@ public class EnemyAIScript : MonoBehaviour
 
 
         //Stop the enemy from moving if: minimum/maximum EnemyProximity has been reached, or the last Waypoint has been reached
-        if (minimumEnemyProximity >= Vector2.Distance(enemyRb.position, target) || maximumEnemyProximity <= Vector2.Distance(enemyRb.position, target) || currentWaypoint >= path.vectorPath.Count)
+        if (minimumEnemyProximity >= Vector2.Distance(enemyPosition, target) || maximumEnemyProximity <= Vector2.Distance(enemyPosition, target) || currentWaypoint >= path.vectorPath.Count)
         {
             //Stop the movement of enemy rigidBody
             enemyRb.velocity = Vector2.zero;
@@ -121,14 +124,15 @@ public class EnemyAIScript : MonoBehaviour
             reachedEndOfPath = false;
         }
 
-        //Update a Vector2 containg a direction of current move
-        direction = ((Vector2)path.vectorPath[currentWaypoint] - enemyRb.position).normalized;
+        //Update a Vector2 containg a direction of current move.
+        direction = ((Vector2)path.vectorPath[currentWaypoint] - enemyPosition).normalized;
 
         //Add a force to move a rigidBody
         Vector2 force = direction * speed * Time.deltaTime;
         enemyRb.AddForce(force);
+        Debug.Log(direction.x + "   " + direction.y + " direction");
 
-        float distance = Vector2.Distance(enemyRb.position, path.vectorPath[currentWaypoint]);
+        float distance = Vector2.Distance(enemyPosition, path.vectorPath[currentWaypoint]);
         if(distance < nextWaypointDistance)
         {
             currentWaypoint++;

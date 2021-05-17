@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIexnjVEjWAIAAPgEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMFy2jAQ/RVG5yZjAy6lt5YQ0gNJJqSTiy9CWmMNsuSR5ADJ8O9dyTJ26MnS7tvd93ZX/iRC2RqY02ZlBF9rDuTniPgz+TbqnQ9wpDutNuIDOsyb4K70IBowL9QJjfbUh1ldgTOC/VI76cEJGhslCm2qJd/BQltn0VxQaQFdRjsfrdD0OSJH/NzMfcgJT+OZP33gaZ6MznhkoByYHppGYHKbRWCLaxSTtKqBe9I9fDrpEk9uswBUKChi2hxMSyls5EPcqQ56N3UJBrxgLijKCxzGeC1B7EoXL5fYp6Kw4KJ2Q093wmCX2qTkt25bV1G7b6m9U9n4MuPseyDVJl3/579Jg7swunro6qaJr+FKwfYv9MSodYPeDs13PfE0dOhA5Z5uJbyVoB71yuhG8UFsY2F8h3dnGhhqW5TA9r295doZL8F13/RumN0ovYpz0H9cSFFtQ+unrWEjdWh42AAwOJw/SDnsh40p0Opp/LXwSnfDRYqOe2GsQ1fUqTy/rW6Mh5Jl6JqX07iFNgqCOUqpQVHpTs+Yxl0P8co3KHvluaf+ycTi0de9hKuQYO7xSXLletaHy7hsqQ9rsOVT46RQ0JP2jkfs00Ir1e6Y/er0UZvGFJQNonaN4F93i8yKbDybJ9MxZGw7S4ubLOWsgCSbcDaj88kPEpZPKJRJ5XPLM3YHh6b65AoXrfuRjFaG1mHduaGHlfio9ICfUIXeMAOgntoMXYcsGCyC75IvucD+bMA5ocK4yWdOpGZ74PklUR6ULo/O0LzPkpNavGvnLTlZhD9HTs7k/A9QSwMEFAAACAgAAAgh7O0iIAJtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTVUVBKL0osyCgGihiCOKWZKSB2tJJ5mqmRuaWBiVGqaXKSuWGarqlhSnJaqoGpcUqyeaKlsYVSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAAgh7GeNUSNYAgAA+AQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAgh7O0iIAJtAAAAeAAAAAkAJAAAAAAAAAAAAAAApQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABdAwAAAAA=
+    dataString: UEsDBBQAAAgIAAAIIexFelcyVAIAAPoEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE2T2jAM/SuMz2UnfKSU3lpg2R5YmGU7e8nF2Arx4NgZ21m+hv9e2UlIlp4Q0pP0niTnSoSyBTCnzdIIvtIcyM8e8Tb51muDL3Cie6224gIN5kNwl3kQDZg36oRG/8CnWZ2DM4L9UnvpwRE6SyVSbfIF38NMW2fRnVJpAUNGO5+t0HXtkRP+9Kc+5YzWcOKtC1rTqHdDk4FyYFrooAZGT3ENrHClYpLmBXBPuoWPR03h0VMcgAoF1ZiqBtNSClvzIe5cBL3bIgMDXjAXFOUFDr55BmKfOV+xm7tOUwuu1m7oeS4MTqkqSn7ranQ5tYeK2ieVpW8zjL8HUlXR1X/x/iCEU6Pzl6bvIPI9XCbY4Y2eGbWuM9uue/6VeKmOVB7oTsJHBupVL40uFe/klhaGc/zvTAldbbMM2KH1V1wb5z25aIfeLLNZpVdxC/pPMynyXRj9uHJspQ4DDxcABpfzBymH+7B1CfR6Gn8tvNN995DqwLMw1mGo1qk8v50ujYeSRZial1O6mTYKgruWUoCi0p03WMY9LvEh1mn7EHmm/snUzetY8xIeUoK7xUfRQ2ijj/d12UwfV2CzdemkUN1iPvKKg5pppaoj60hq0ralSSnrpu1Lwb9eF5mk8XAyjcZDiNluMkj78YCzFKJ4xNmETkc/SDg/oVAolZuKaT0fXJtq2yo8teZT0lsaWoSD54Yel+KS6w5BoVK9ZQZArasKd1lgsAm+TL7gAie0BeeECgsn14RIzQ7Ak3uhJEhdnJyhSVslIYX41M57EjIL346E3MjtH1BLAwQUAAAICAAACCHs7SIgAm0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0knmaqZG5pYGJUappcpK5YZquqWFKclqqgalxSrJ5oqWxhVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHsRXpXMlQCAAD6BAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHs7SIgAm0AAAB4AAAACQAkAAAAAAAAAAAAAAChAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAFkDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -213,75 +213,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7805023065341288980}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &342033038
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1921296600484629014, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
-        type: 3}
-      propertyPath: m_Name
-      value: CM vcam2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 42.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1921296600484629016, guid: 98224943c2b0d1446ab22a2bdd9fcbe3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 98224943c2b0d1446ab22a2bdd9fcbe3, type: 3}
 --- !u!4 &541260803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3604303739231731827, guid: e6de72025d4052941b55d4d051a70942,
@@ -2111,7 +2042,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2538558680482534545}
     - target: {fileID: 3497287425514334116, guid: 8dbb76f5a3b7a7e4690546d9878c737f,
         type: 3}
       propertyPath: m_Priority
@@ -2205,7 +2136,7 @@ PrefabInstance:
     - target: {fileID: 3497287425514334119, guid: 8dbb76f5a3b7a7e4690546d9878c737f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3497287425514334119, guid: 8dbb76f5a3b7a7e4690546d9878c737f,
         type: 3}
@@ -2535,7 +2466,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2559,7 +2490,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250660388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.1, y: 11, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11571,7 +11502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1998493640
 Transform:
   m_ObjectHideFlags: 0
@@ -12382,12 +12313,12 @@ PrefabInstance:
     - target: {fileID: 4021985857125125746, guid: 4974e8dfaba6bc046a11f5322c383cd6,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4021985857125125746, guid: 4974e8dfaba6bc046a11f5322c383cd6,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4757857173037051543, guid: 4974e8dfaba6bc046a11f5322c383cd6,
         type: 3}
@@ -12457,7 +12388,7 @@ PrefabInstance:
     - target: {fileID: 6632378046319575289, guid: 4974e8dfaba6bc046a11f5322c383cd6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9164883630032026657, guid: 4974e8dfaba6bc046a11f5322c383cd6,
         type: 3}
