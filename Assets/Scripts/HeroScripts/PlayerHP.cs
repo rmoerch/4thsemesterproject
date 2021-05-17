@@ -59,7 +59,7 @@ public class PlayerHP : MonoBehaviour
 
             //gameManager.SaveGame();
             //GameManager.instance.heroPrefab = sp.GetHero();
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
         hitCooldown--;
     }

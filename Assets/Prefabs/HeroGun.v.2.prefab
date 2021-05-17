@@ -648,7 +648,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 100
   healthBar: {fileID: 4021985857455198931}
-  hero: {fileID: 0}
   hitCooldownTime: 20
 --- !u!114 &6632378046319575271
 MonoBehaviour:
@@ -994,12 +993,12 @@ PrefabInstance:
     - target: {fileID: 5251412434779420886, guid: b4534393a01d7384eac00c5681d4a9a9,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 328
+      value: 381
       objectReference: {fileID: 0}
     - target: {fileID: 5251412434779420886, guid: b4534393a01d7384eac00c5681d4a9a9,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 832
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 5251412435126789238, guid: b4534393a01d7384eac00c5681d4a9a9,
         type: 3}

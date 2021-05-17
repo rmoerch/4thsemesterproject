@@ -19,7 +19,7 @@ public class GunAmmo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        allAmmo = 62;
+        allAmmo = 99999;
         magazineAmmo = magazineSize;
 
         updateUI();
