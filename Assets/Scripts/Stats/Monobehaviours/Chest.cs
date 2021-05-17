@@ -14,28 +14,23 @@ public class Chest : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Hero"))
         {
-            //StartCoroutine(SpawnAfterDelay());
-            Destroy(gameObject);
-            GameObject effect = Instantiate(chestEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 1.5f);
-            //Invoke("ChestSpawn", 1.5f);
-            int randomIndex = Random.Range(0, itemsToSpawn.Length);
-            GameObject clone = Instantiate(itemsToSpawn[randomIndex], transform.position, Quaternion.identity);
-
+            Invoke("ChestAnimation", 0f);
+            Invoke("SpawnAfterDelay", 1.5f);
         }
     }
 
-    //private void ChestSpawn()
-    //{
-    //    int randomIndex = Random.Range(0, itemsToSpawn.Length);
-    //    GameObject clone = Instantiate(itemsToSpawn[randomIndex], transform.position, Quaternion.identity);
-    //    Debug.Log("hello");
-    //}
+    private void ChestAnimation()
+    {
+        gameObject.SetActive(false);
+        Destroy(gameObject, 1.6f);
+        GameObject effect = Instantiate(chestEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 1.5f);
+    }
 
-    //IEnumerator SpawnAfterDelay()
-    //{
-    //    yield return new WaitForSeconds(1.5f);
-    //    int randomIndex = Random.Range(0, itemsToSpawn.Length);
-    //    GameObject clone = Instantiate(itemsToSpawn[randomIndex], transform.position, Quaternion.identity);
-    //}
+    private void SpawnAfterDelay()
+    {
+        int randomIndex = Random.Range(0, itemsToSpawn.Length);
+        GameObject clone = Instantiate(itemsToSpawn[randomIndex], transform.position, Quaternion.identity);
+    }
+
 }
