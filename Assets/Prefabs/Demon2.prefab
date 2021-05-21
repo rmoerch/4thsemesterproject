@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 914145081056035269}
   - component: {fileID: 914145081056035270}
   - component: {fileID: 5046220229260087197}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Demon2GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 5195468741723224257}
   - component: {fileID: 2884599696184078473}
   - component: {fileID: 654386391685720876}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Demon2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 5539257291507116929}
   - component: {fileID: 5539257291507116935}
   - component: {fileID: 5539257291507116934}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: HitBox
   m_TagString: EnemyHitBox
   m_Icon: {fileID: 0}
@@ -448,6 +448,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealthBarCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251412434112278671, guid: b4534393a01d7384eac00c5681d4a9a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251412434701907425, guid: b4534393a01d7384eac00c5681d4a9a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251412434779420885, guid: b4534393a01d7384eac00c5681d4a9a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251412435126789237, guid: b4534393a01d7384eac00c5681d4a9a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5251412435126789238, guid: b4534393a01d7384eac00c5681d4a9a9,
         type: 3}

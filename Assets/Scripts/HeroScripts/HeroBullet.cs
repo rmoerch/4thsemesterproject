@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow : MonoBehaviour
+public class HeroBullet : MonoBehaviour
 {
     public GameObject hitEffect;
     public float bulletForce;
 
     private void Start()
     {
+        //Igrone collision of bullets with bullets
+        Physics2D.IgnoreLayerCollision(9, 9);
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,6 +22,10 @@ public class Arrow : MonoBehaviour
         {
             collision.gameObject.GetComponentInParent<EnemyHP>().LoseHP(20);
             collision.gameObject.GetComponentInParent<Rigidbody2D>().AddForce(gameObject.transform.up * bulletForce, ForceMode2D.Impulse);
+        }
+        if (collision.gameObject.CompareTag("BossHitBox"))
+        {
+            collision.gameObject.GetComponentInParent<EnemyHP>().LoseHP(20);
         }
     }
 

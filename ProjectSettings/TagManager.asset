@@ -13,6 +13,8 @@ TagManager:
   - TileMapObject
   - Wall
   - DeathMenu
+  - EnemyBullet
+  - BossHitBox
   layers:
   - Default
   - TransparentFX
@@ -23,11 +25,11 @@ TagManager:
   - 
   - 
   - AICollisionMap
-  - Bullets
+  - HeroBullets
   - Player
   - Interactable
-  - 
-  - 
+  - EnemyBullets
+  - Enemies
   - 
   - 
   - 

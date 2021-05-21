@@ -10,29 +10,19 @@ public class GunAmmo : MonoBehaviour
     [SerializeField]
     private Text magazineAmmoText;
     [SerializeField]
+    private int magazineSize;
 
     private int allAmmo;
-    private int localMagAmmo;
+    private int magazineAmmo;
 
     private bool isReloading;
-
-    private GameManager gM;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        gM = GameManager.instance;
-        allAmmo = gM.allAmmo;
-        localMagAmmo = gM.magAmmo;
-
-        if(localMagAmmo == 0)
-        {
-            localMagAmmo = gM.magSize;
-            allAmmo -= localMagAmmo;  
-        } else
-        {
-            //allAmmo -= localMagAmmo;
-        }
+        allAmmo = 99999;
+        magazineAmmo = magazineSize;
 
         updateUI();
     }
@@ -40,7 +30,7 @@ public class GunAmmo : MonoBehaviour
     public bool Shoot()
     {
         //If magazine ammo is empty
-        if (localMagAmmo <= 0)
+        if (magazineAmmo <= 0)
         {
             //if all ammo is out - can't reaload, can't shoot
             if(allAmmo <= 0) { return false; }
@@ -51,7 +41,7 @@ public class GunAmmo : MonoBehaviour
         //If ammo still in magazine - allow to shoot and decreace magazine ammo
         else
         {
-            localMagAmmo--;
+            magazineAmmo--;
             updateUI();
             return true;
         }
@@ -60,7 +50,7 @@ public class GunAmmo : MonoBehaviour
     public void TryReloadGun()
     {
         //If magazine is full - don't reload
-        if(localMagAmmo == gM.magSize) { return; }
+        if(magazineAmmo == magazineSize) { return; }
         //If already reloading - don't reload
         if(isReloading) { return; }
 
@@ -77,17 +67,17 @@ public class GunAmmo : MonoBehaviour
     private void ReloadGun()
     {
         //if allAmmo is equal to the magazine size, reload to full magazine
-        if(allAmmo >= gM.magSize) 
+        if(allAmmo >= magazineSize) 
         { 
-            localMagAmmo = gM.magSize;
-            allAmmo -= localMagAmmo;
+            magazineAmmo = magazineSize;
+            allAmmo -= magazineSize;
             updateUI();
         }
 
         //if allAmmo is less the a magazine size, reload to all you can get
-        else if(allAmmo < gM.magSize)
+        else if(allAmmo < magazineSize)
         {
-            localMagAmmo = allAmmo;
+            magazineAmmo = allAmmo;
             allAmmo = 0;
             updateUI();
         }
@@ -96,19 +86,8 @@ public class GunAmmo : MonoBehaviour
 
     private void updateUI()
     {
-        SaveData();
-        magazineAmmoText.text = localMagAmmo.ToString();
+        magazineAmmoText.text = magazineAmmo.ToString();
         allAmmoText.text = allAmmo.ToString();
     }
 
-    private void SaveData()
-    {
-        gM.allAmmo = allAmmo;
-        gM.magAmmo = localMagAmmo;
-    }
-
-    private void FixedUpdate()
-    {
-        SaveData();
-    }
 }

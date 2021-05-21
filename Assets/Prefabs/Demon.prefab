@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 926736650}
   - component: {fileID: 926736651}
   - component: {fileID: 926736652}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: HitBox
   m_TagString: EnemyHitBox
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 8310660164093234608}
   - component: {fileID: 8310660164093234623}
   - component: {fileID: 1157870741574717052}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Demon1GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 8310660165276700849}
   - component: {fileID: 8828133814050348200}
   - component: {fileID: 1755325525}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Demon
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -435,6 +435,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealthBarCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251412434112278671, guid: b4534393a01d7384eac00c5681d4a9a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251412434701907425, guid: b4534393a01d7384eac00c5681d4a9a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251412434779420885, guid: b4534393a01d7384eac00c5681d4a9a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251412435126789237, guid: b4534393a01d7384eac00c5681d4a9a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5251412435126789238, guid: b4534393a01d7384eac00c5681d4a9a9,
         type: 3}

@@ -130,7 +130,6 @@ public class EnemyAIScript : MonoBehaviour
         //Add a force to move a rigidBody
         Vector2 force = direction * speed * Time.deltaTime;
         enemyRb.AddForce(force);
-        Debug.Log(direction.x + "   " + direction.y + " direction");
 
         float distance = Vector2.Distance(enemyPosition, path.vectorPath[currentWaypoint]);
         if(distance < nextWaypointDistance)
