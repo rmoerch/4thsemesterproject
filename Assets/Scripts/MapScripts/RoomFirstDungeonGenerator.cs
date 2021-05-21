@@ -101,6 +101,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         HashSet<Vector2Int> corridor = new HashSet<Vector2Int>();
         var position = currentRoomCenter;
         corridor.Add(position);
+        
         //First, we go up or down until we reach the value of y.
         while (position.y != destination.y)
         {
@@ -129,6 +130,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         }
         return corridor;
     }
+
 
     //This method finds the closest point to the current room center.
     private Vector2Int FindClosestPointTo(Vector2Int currentRoomCenter, List<Vector2Int> roomCenters)
