@@ -14,7 +14,7 @@ public class EnemyHP : MonoBehaviour
     void Start()
     {
         hP = maxHP;
-        healthBar.StartHealthBar(maxHP);
+        healthBar.StartHealthBar(maxHP, hP);
     }
 
     public void LoseHP(int damage)

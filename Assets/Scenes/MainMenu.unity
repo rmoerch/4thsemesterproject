@@ -4206,6 +4206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroPrefab: {fileID: 6632378046319575289, guid: 4974e8dfaba6bc046a11f5322c383cd6,
     type: 3}
+  maxHP: 100
+  currentHP: 100
 --- !u!1 &1499042221
 GameObject:
   m_ObjectHideFlags: 0

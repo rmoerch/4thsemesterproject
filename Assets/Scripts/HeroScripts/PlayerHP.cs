@@ -5,27 +5,39 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHP : MonoBehaviour
 {
-    [SerializeField]
-    float maxHP = 100;
+    private GameManager gM;
+
     [SerializeField]
     HealthBarScript healthBar;
-    float hP;
-    private Spawner sp;
+
     //Cooldown for a hit - Player cannot be hit within hitCooldown time
     private int hitCooldown = 0;
+
+    //hold value for how much it should wait in cooldown, must be declared in Unity inspector
     [SerializeField]
     private int hitCooldownTime;
+
+    private float hP;
 
     // Start is called before the first frame update
     void Start()
     {
-        hP = maxHP;
-        healthBar.StartHealthBar(maxHP);
+        gM = GameManager.instance;
+
+        if(gM.currentHP <= 0)
+        {
+            hP = gM.maxHP;
+        } else
+        {
+            hP = gM.currentHP;
+        }
+        
+        healthBar.StartHealthBar(gM.maxHP, hP); 
     }
 
     public void GetHP(float health)
     {
-        if (health < 100)
+        if (hP < 100)
         {
             hP += health;
             healthBar.SetHealth(hP);
@@ -46,19 +58,23 @@ public class PlayerHP : MonoBehaviour
 
     private void FixedUpdate()
     {
+        healthBar.SetHealth(hP);
         hitCooldown--;
+        SaveData();
     }
 
+    public void SaveData()
+    {
+        gM.currentHP = hP;
+    }
     private void CheckIfGameOver()
     {
         if (hP <= 0)
         {
-            //I guess we should call game manager to do its work at this point.
-            //After death we save hero prefab, load GameOver scene
-            //Inside GameOver scene, upon clicking PlayAgain, we pass saved hero prefab to spawner class
-
-            //gameManager.SaveGame();
-            //GameManager.instance.heroPrefab = sp.GetHero();
+            SaveData();
+            //If hp is 0 or less, character dies and game loads GameOver scene
+            //Load game over scene, hard coded value
+            //18 may, game over scene is number 4 in build settings
             SceneManager.LoadScene(4);
         }
         hitCooldown--;
