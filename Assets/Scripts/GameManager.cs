@@ -13,26 +13,29 @@ public class GameManager : MonoBehaviour
     //maximum hp value
     public float maxHP = 100;
 
-    //hp value to be updated and displayed in game ui
+    //hp value to be updated and displayed in inspector
     public float currentHP;
 
+    //all current ammo value
     public int allAmmo = 6000;
 
+    //rather static but expansiable value to define size of magazine
     public int magSize = 60;
 
+    //holds value of current magazine ammo
     public int magAmmo;
 
 
 
 
-
+    //call when script instance is loaded
     private void Awake()
     {
         MakeSingleton();
     }
 
     //use singleton to initialize single instance of game manager
-    //which is put in Dont Destroy On Load, which passes this object through game w/o destroying it
+    //which is put in Dont Destroy On Load, thus preserving game object during level loading 
     private void MakeSingleton()
     {
         if(instance != null)
