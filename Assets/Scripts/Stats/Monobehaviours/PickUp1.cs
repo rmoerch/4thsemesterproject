@@ -2,14 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Potion : MonoBehaviour
+public class PickUp1 : MonoBehaviour
 {
-<<<<<<< Updated upstream
-    void OnTriggerEnter2D(Collider2D collision)
-=======
-    [SerializeField]
-    float healthRestore;
-
     private Inventory1 inventory1;
     public GameObject itemButton;
 
@@ -19,14 +13,8 @@ public class Potion : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
->>>>>>> Stashed changes
     {
-        if (collision.CompareTag("Hero"))
-        {
-            collision.gameObject.GetComponentInParent<PlayerHP>().GetHP(20);
-            Destroy(gameObject);
-        }
-        else
+        if(collision.CompareTag("Hero"))
         {
             for (int i = 0; i < inventory1.slots.Length; i++)
             {
@@ -41,5 +29,6 @@ public class Potion : MonoBehaviour
             }
         }
     }
-
 }
+
+

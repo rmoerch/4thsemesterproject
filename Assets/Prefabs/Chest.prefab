@@ -141,4 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a29568b281add44788aa10ecd8148b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openChest: {fileID: 0}
+  chestEffect: {fileID: 1265982980283276348, guid: e4415fe5519c8154ea39cbd48adec6bd,
+    type: 3}
+  itemsToSpawn:
+  - {fileID: 4784808599819303601, guid: fbf7ebedf30fe464086bfb0c19e50504, type: 3}
+  - {fileID: 8310660165276700860, guid: 0e2e7c7fd1ace6d469e2325beaed5ad2, type: 3}
+  - {fileID: 914145082521715806, guid: 576f9902cc18174418ed2ad44b7dbafd, type: 3}
