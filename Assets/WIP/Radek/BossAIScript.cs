@@ -31,6 +31,8 @@ public class BossAIScript : MonoBehaviour
     Vector2 enemyPosition;
     Rigidbody2D enemyRb;
 
+    public bool isBossTriggered = false;
+
     int attackMode;
     int modeTimer;
 
@@ -53,6 +55,8 @@ public class BossAIScript : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(!isBossTriggered) { return; }
+
         switch (attackMode)
         {
             case 1:
