@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Potion : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D collision)
+    [SerializeField]
+    float healthRestore;
+
+    private Transform player;
+
+    private void Start()
     {
         if (collision.gameObject.CompareTag("Hero"))
         {
