@@ -26,18 +26,18 @@ public class PlayerHP : MonoBehaviour
         gM = GameManager.instance;
 
         
-        if(gM.CurrentHP <= 0)
+        if(gM.currentHP <= 0)
         {
             //if hp value in game manager value is <=0, it means the game is started for a first time or player has died
-            hP = gM.MaxHP;
+            hP = gM.maxHP;
         } else
         {
             //if current hp is not <=0, means character is alive, which in ints turn means it has switched playable scenes
-            hP = gM.CurrentHP;
+            hP = gM.currentHP;
         }
         
         //Initialize health bar with maximum value and local value of current hp
-        healthBar.StartHealthBar(gM.MaxHP, hP); 
+        healthBar.StartHealthBar(gM.maxHP, hP); 
     }
 
 
@@ -73,7 +73,7 @@ public class PlayerHP : MonoBehaviour
     //pass local hp value to global game manager instance
     public void SaveData()
     {
-        gM.CurrentHP = hP;
+        gM.currentHP = hP;
     }
 
     //If player dies

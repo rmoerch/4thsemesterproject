@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
@@ -73,3 +74,84 @@ TagManager:
   - name: Foreground
     uniqueID: 618695207
     locked: 0
+=======
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Hero
+  - Enemy
+  - Spawnable
+  - Floor
+  - VirtualCamera
+  - EnemyHitBox
+  - TileMapObject
+  - Wall
+  - DeathMenu
+  - EnemyBullet
+  - BossHitBox
+  - Door
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - AICollisionMap
+  - HeroBullets
+  - Player
+  - Interactable
+  - EnemyBullets
+  - Enemies
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: AI_Movement
+    uniqueID: 3153715997
+    locked: 0
+  - name: Background
+    uniqueID: 597138539
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 1466963791
+    locked: 0
+  - name: Decorations
+    uniqueID: 1683432625
+    locked: 0
+  - name: BackgroundElements
+    uniqueID: 4270675973
+    locked: 0
+  - name: Agents
+    uniqueID: 1179366265
+    locked: 0
+  - name: Interactables
+    uniqueID: 3317120449
+    locked: 0
+  - name: Foreground
+    uniqueID: 618695207
+    locked: 0
+>>>>>>> parent of 8d8442f... Merge remote-tracking branch 'origin/master'
