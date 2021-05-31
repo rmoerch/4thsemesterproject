@@ -16,7 +16,15 @@ public class CoroutineManager : MonoBehaviour
         }
         else
         {
+<<<<<<< Updated upstream:Assets/Scripts/CorutineManager.cs
             instance = this;
+=======
+            collision.gameObject.GetComponentInParent<PlayerHP>().LoseHP(10);
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponentInParent<EnemyHP>().LoseHP(10);
+>>>>>>> Stashed changes:Assets/WIP/Fuck/Spikes.cs
         }
     }
 }

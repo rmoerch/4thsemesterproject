@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Potion : MonoBehaviour
 {
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     [SerializeField]
     float healthRestore;
 

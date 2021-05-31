@@ -11,6 +11,9 @@ public class HeroBullet : MonoBehaviour
     {
         //Igrone collision of bullets with bullets
         Physics2D.IgnoreLayerCollision(9, 9);
+        Physics2D.IgnoreLayerCollision(0, 9);
+        //GameObject trap = GameObject.FindGameObjectWithTag("Trap");
+        //Physics2D.IgnoreCollision(trap.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
