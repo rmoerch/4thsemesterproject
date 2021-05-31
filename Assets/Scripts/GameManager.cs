@@ -118,8 +118,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //boolean used in LoadGame method to keep track if loading of file was success
+    //boolean used in LoadGame method to keep track if loading of file was a success
     private bool isLoadedSuccesfully = false;
+
+    //bollean used in SaveGame method to keep track if saving data to file was a success
+    private bool isSavedSuccesfully = false;
 
     //call when script instance is loaded
     private void Awake()
@@ -166,7 +169,16 @@ public class GameManager : MonoBehaviour
         data.savedMagAmmo = MagAmmo;
         bf.Serialize(file, data);
         file.Close();
-        Debug.Log("data saved!");
+        
+        if (File.Exists(Application.persistentDataPath + "/Group14GameSaveData.dat"))
+        {
+            Debug.Log("data saved!");
+            isSavedSuccesfully = true;
+        } else
+        {
+            Debug.Log("data not saved!");
+            isSavedSuccesfully = false;
+        }
     }
 
     public void LoadGame()
@@ -192,9 +204,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public bool GetSuccess()
+    public bool GetLoadSuccess()
     {
         return isLoadedSuccesfully;
+    }
+
+    public bool GetSaveSuccess()
+    {
+        return isSavedSuccesfully;
     }
 }
 

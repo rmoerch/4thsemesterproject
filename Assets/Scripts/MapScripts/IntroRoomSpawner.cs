@@ -21,7 +21,7 @@ public class IntroRoomSpawner : MonoBehaviour
     {
         var vCam = GameObject.FindGameObjectsWithTag("VirtualCamera")[0].GetComponent<CinemachineVirtualCamera>();
         DestroyObjects();
-        heroClone = Instantiate(gM.heroPrefab, new Vector3(-1, 1, 0), Quaternion.identity);
+        heroClone = Instantiate(gM.HeroPrefab, new Vector3(-1, 1, 0), Quaternion.identity);
         vCam.Follow = heroClone.transform;
         heroClone.GetComponent<PlayerMovement>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         heroClone.GetComponentInChildren<BlasterRotation>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();

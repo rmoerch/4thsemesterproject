@@ -19,7 +19,7 @@ public class BossRoomSpawner : MonoBehaviour
     {
         var vCam = GameObject.FindGameObjectsWithTag("VirtualCamera")[0].GetComponent<CinemachineVirtualCamera>();
         DestroyObjects();
-        heroClone = Instantiate(gM.heroPrefab, new Vector3(29,0,0), Quaternion.identity);
+        heroClone = Instantiate(gM.HeroPrefab, new Vector3(29,0,0), Quaternion.identity);
         vCam.Follow = heroClone.transform;
         heroClone.GetComponent<PlayerMovement>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         heroClone.GetComponentInChildren<BlasterRotation>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();

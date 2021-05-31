@@ -45,7 +45,7 @@ public class MainMenu : MonoBehaviour
         {
             Debug.LogError(e.ToString());
         }
-        if(gM.GetSuccess() == true) { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); } else
+        if(gM.GetLoadSuccess() == true) { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); } else
         {
             Debug.LogError("unsuccesful");
         }
@@ -66,6 +66,7 @@ public class MainMenu : MonoBehaviour
         {
             Debug.LogError(e.ToString());
         }
+        if (gM.GetSaveSuccess() == false) { Debug.LogError("unsuccesful"); } else { Debug.LogError("success"); }
     }
 
     //quit game

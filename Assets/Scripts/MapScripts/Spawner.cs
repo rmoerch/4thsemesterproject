@@ -67,7 +67,7 @@ public class Spawner : MonoBehaviour
         int i = Random.Range(0, availableRooms.Count);
         var spawnPoint = availableRooms[i];
         availableRooms.RemoveAt(i);
-        heroClone = Instantiate(heroPrefab, spawnPoint.center, Quaternion.identity);
+        heroClone = Instantiate(gM.HeroPrefab, spawnPoint.center, Quaternion.identity);
         vCam.Follow = heroClone.transform;
         heroClone.GetComponent<PlayerMovement>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         heroClone.GetComponentInChildren<BlasterRotation>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
