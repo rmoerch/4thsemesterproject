@@ -7,16 +7,24 @@ using System.Linq;
 public class Spawner : MonoBehaviour
 {
     public RoomFirstDungeonGenerator dungeonGenerator;
-    //public GameObject heroPrefab;
+    public GameObject heroPrefab;
     private GameManager gM;
     public GameObject enemyPrefab;
     public List<BoundsInt> spawner;
     public List<BoundsInt> availableRooms;
     public HashSet<BoundsInt> randomFloorTilesList1;
+    
     Collision collision;
     public GameObject portal;
     private GameObject heroClone;
     public GameObject potion;
+    public GameObject chest;
+    public GameObject npc;
+    public GameObject cell;
+    public GameObject key;
+    public GameObject[] decorations;
+    public GameObject[] torches;
+    public GameObject[] traps;
     //public List<GameObject> objectsToSpawn;
 
 
@@ -27,7 +35,13 @@ public class Spawner : MonoBehaviour
         //EnemySpawnCenter();
         EnemySpawnRandom();
         PortalSpawn();
-        PotionSpawn();
+        //PotionSpawn();
+        ChestSpawn();
+        CellSpawn();
+        KeySpawn();
+        DecorationsSpawn();
+        TorchesSpawn();
+        TrapSpawn();
 
         //Update the AI Map after 1sec when everything is generated
         Invoke("UpdateAIMap", 1);
@@ -53,7 +67,7 @@ public class Spawner : MonoBehaviour
         int i = Random.Range(0, availableRooms.Count);
         var spawnPoint = availableRooms[i];
         availableRooms.RemoveAt(i);
-        heroClone = Instantiate(gM.heroPrefab, spawnPoint.center, Quaternion.identity);
+        heroClone = Instantiate(heroPrefab, spawnPoint.center, Quaternion.identity);
         vCam.Follow = heroClone.transform;
         heroClone.GetComponent<PlayerMovement>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         heroClone.GetComponentInChildren<BlasterRotation>().cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -62,22 +76,52 @@ public class Spawner : MonoBehaviour
 
     public void PortalSpawn()
     {
-        
+
         var hero = GameObject.FindGameObjectsWithTag("Player");
 
         //dungeonGenerator.GetComponent<RoomFirstDungeonGenerator>();
         //availableRooms = new List<BoundsInt>();
-        
+
         foreach (var room in availableRooms)
         {
             var spawnpoint = room;
-            
+
         }
         int i = Random.Range(0, availableRooms.Count);
         var portalSpawnPoint = availableRooms[i];
         availableRooms.RemoveAt(i);
         Instantiate(portal, portalSpawnPoint.center, Quaternion.identity);
 
+    }
+
+    public void KeySpawn()
+    {
+        foreach (var room in availableRooms)
+        {
+            var spawnpoint = room;
+
+        }
+        int i = Random.Range(0, availableRooms.Count);
+        var keySpawnPoint = availableRooms[i];
+        availableRooms.RemoveAt(i);
+        Instantiate(key, keySpawnPoint.center, Quaternion.identity);
+
+    }
+
+    public void CellSpawn()
+    {
+        foreach (var room in availableRooms)
+        {
+            var spawnpoint = room;
+            
+        }
+        int i = Random.Range(0, availableRooms.Count);
+        var cellSpawnPoint = availableRooms[i];
+        var npcSpawnPoint = availableRooms[i];
+        availableRooms.RemoveAt(i);
+        Instantiate(cell, cellSpawnPoint.center, Quaternion.identity);
+        Instantiate(npc, npcSpawnPoint.center, Quaternion.identity);
+        
     }
 
     public void PotionSpawn()
@@ -89,6 +133,75 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    public void ChestSpawn()
+    {
+        dungeonGenerator.GetComponent<RoomFirstDungeonGenerator>();
+        List<BoundsInt> randomFloorTilesList1 = dungeonGenerator.roomsList;
+        HashSet<Vector2Int> globalFloor = dungeonGenerator.globalFloorList;
+        List<Vector2Int> randomFloorTilesList = dungeonGenerator.globalFloorList.ToList();
+        foreach (var room in randomFloorTilesList)
+        {
+            if (Random.Range(0, 200) == 1)
+            {
+                int i = Random.Range(0, randomFloorTilesList.Count);
+                Vector2Int spawnpoint = randomFloorTilesList[i];
+                Instantiate(chest, new Vector3(spawnpoint.x, spawnpoint.y, 0), Quaternion.identity);
+            }
+        }
+    }
+    public void DecorationsSpawn()
+    {
+        dungeonGenerator.GetComponent<RoomFirstDungeonGenerator>();
+        List<BoundsInt> randomFloorTilesList1 = dungeonGenerator.roomsList;
+        HashSet<Vector2Int> globalFloor = dungeonGenerator.globalFloorList;
+        List<Vector2Int> randomFloorTilesList = dungeonGenerator.globalFloorList.ToList();
+        foreach (var room in randomFloorTilesList)
+        {
+            if (Random.Range(0, 20) == 1)
+            {
+                int i = Random.Range(0, randomFloorTilesList.Count);
+                Vector2Int spawnpoint = randomFloorTilesList[i];
+                int randomIndex = Random.Range(0, decorations.Length);
+                Instantiate(decorations[randomIndex], new Vector3(spawnpoint.x, spawnpoint.y, 0), Quaternion.identity);
+            }
+        }
+    }
+
+    public void TorchesSpawn()
+    {
+        dungeonGenerator.GetComponent<RoomFirstDungeonGenerator>();
+        List<BoundsInt> randomFloorTilesList1 = dungeonGenerator.roomsList;
+        HashSet<Vector2Int> globalFloor = dungeonGenerator.globalFloorList;
+        List<Vector2Int> randomFloorTilesList = dungeonGenerator.globalFloorList.ToList();
+        foreach (var room in randomFloorTilesList)
+        {
+            if (Random.Range(0, 100) == 1)
+            {
+                int i = Random.Range(0, randomFloorTilesList.Count);
+                Vector2Int spawnpoint = randomFloorTilesList[i];
+                int randomIndex = Random.Range(0, torches.Length);
+                Instantiate(torches[randomIndex], new Vector3(spawnpoint.x, spawnpoint.y, 0), Quaternion.identity);
+            }
+        }
+    }
+
+    public void TrapSpawn()
+    {
+        dungeonGenerator.GetComponent<RoomFirstDungeonGenerator>();
+        List<BoundsInt> randomFloorTilesList1 = dungeonGenerator.roomsList;
+        HashSet<Vector2Int> globalFloor = dungeonGenerator.globalFloorList;
+        List<Vector2Int> randomFloorTilesList = dungeonGenerator.globalFloorList.ToList();
+        foreach (var room in randomFloorTilesList)
+        {
+            if (Random.Range(0, 50) == 1)
+            {
+                int i = Random.Range(0, randomFloorTilesList.Count);
+                Vector2Int spawnpoint = randomFloorTilesList[i];
+                int randomIndex = Random.Range(0, traps.Length);
+                Instantiate(traps[randomIndex], new Vector3(spawnpoint.x, spawnpoint.y, 0), Quaternion.identity);
+            }
+        }
+    }
 
     public void EnemySpawnCenter()
     {
@@ -105,15 +218,13 @@ public class Spawner : MonoBehaviour
     public void EnemySpawnRandom()
     {
         dungeonGenerator.GetComponent<RoomFirstDungeonGenerator>();
-        List<BoundsInt> randomFloorTilesList1 = dungeonGenerator.roomsList;
-        Debug.Log("room list" + randomFloorTilesList1.Count);
+        //List<BoundsInt> roomsForEnemySpawn = dungeonGenerator.roomsList;
         HashSet<Vector2Int> globalFloor = dungeonGenerator.globalFloorList;
-        Debug.Log("tiles list" + globalFloor.Count);
+
         List<Vector2Int> randomFloorTilesList = dungeonGenerator.globalFloorList.ToList();
         foreach (var room in randomFloorTilesList)    
         {
-            Debug.Log("Spawning randomly" + room);
-            if (Random.Range(0, 70) == 1)
+            if (Random.Range(0, 200) == 1)
             {
                 int i = Random.Range(0, randomFloorTilesList.Count);
                 Vector2Int spawnpoint = randomFloorTilesList[i];
