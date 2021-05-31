@@ -24,14 +24,14 @@ public class GunAmmo : MonoBehaviour
         gM = GameManager.instance;
 
         //Take values from game manager 
-        allAmmo = gM.allAmmo;
-        localMagAmmo = gM.magAmmo;
+        allAmmo = gM.AllAmmo;
+        localMagAmmo = gM.MagAmmo;
 
         //if it is first run, magazine is going to be empty
         if (localMagAmmo == 0)
         {
             //fill magazine with ammo from all ammo
-            localMagAmmo = gM.magSize;
+            localMagAmmo = gM.MagSize;
             allAmmo -= localMagAmmo;
         }
         else
@@ -67,7 +67,7 @@ public class GunAmmo : MonoBehaviour
     public void TryReloadGun()
     {
         //If magazine is full - don't reload
-        if(localMagAmmo == gM.magSize) { return; }
+        if(localMagAmmo == gM.MagSize) { return; }
 
         //If already reloading - don't reload
         if(isReloading) { return; }
@@ -86,15 +86,15 @@ public class GunAmmo : MonoBehaviour
     private void ReloadGun()
     {
         //if allAmmo is more than magazine size or equal, reload to full magazine and distract value from allammo
-        if(allAmmo >= gM.magSize) 
+        if(allAmmo >= gM.MagSize) 
         { 
-            localMagAmmo = gM.magSize;
+            localMagAmmo = gM.MagSize;
             allAmmo -= localMagAmmo;
             updateUI();
         }
 
         //if allAmmo is less the a magazine size, reload to all you can get
-        else if(allAmmo < gM.magSize)
+        else if(allAmmo < gM.MagSize)
         {
             localMagAmmo = allAmmo;
             allAmmo = 0;
@@ -114,8 +114,8 @@ public class GunAmmo : MonoBehaviour
     //update all ammo and currently loaded magazine to game manager
     private void SaveData()
     {
-        gM.allAmmo = allAmmo;
-        gM.magAmmo = localMagAmmo;
+        gM.AllAmmo = allAmmo;
+        gM.MagAmmo = localMagAmmo;
     }
 
     //send data to game manager each fixed frame
