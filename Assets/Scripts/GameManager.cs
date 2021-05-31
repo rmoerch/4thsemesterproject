@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     //use this public field to insert hero prefab
     public GameObject heroPrefab;
+    
 
     //maximum hp value
     public float maxHP = 100;

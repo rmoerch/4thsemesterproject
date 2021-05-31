@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerShootingScript : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class PlayerShootingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+
         if (shootCooldown <= 0)
         {
             if (Input.GetButton("Fire1"))
@@ -30,6 +33,7 @@ public class PlayerShootingScript : MonoBehaviour
             }
         }
         else if (shootCooldown > 0){ shootCooldown = shootCooldown - 1 * Time.deltaTime ; }
+
     }
 
     void Shoot()
@@ -54,4 +58,5 @@ public class PlayerShootingScript : MonoBehaviour
         rb.AddForce( firePoint * bulletForce, ForceMode2D.Impulse);
 
     }
+
 }

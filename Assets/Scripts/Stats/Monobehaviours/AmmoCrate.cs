@@ -6,15 +6,18 @@ public class AmmoCrate : MonoBehaviour
 {
     [SerializeField]
     int ammoRestore;
+    
+    private Transform player;
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void Start()
     {
-        if (collision.gameObject.CompareTag("Hero"))
-        {
-            //collision.gameObject.GetComponentInParent<GunAmmo>().PickUpAmmo(ammoRestore);
-            Destroy(gameObject);
-        }
+        player = GameObject.FindGameObjectWithTag("Hero").transform;
+    }
 
+    public void Use()
+    {
+        //gameObject.GetComponentInParent<GunAmmo>().PickUpAmmo(ammoRestore);
+        Destroy(gameObject);
     }
 
 }

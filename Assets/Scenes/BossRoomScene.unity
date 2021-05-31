@@ -2282,6 +2282,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6de72025d4052941b55d4d051a70942, type: 3}
+--- !u!1 &839898942 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 914145082521715806, guid: 576f9902cc18174418ed2ad44b7dbafd,
+    type: 3}
+  m_PrefabInstance: {fileID: 5288369213442496753}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &932757523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2293,7 +2299,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2538558680482534545}
     - target: {fileID: 3497287425514334116, guid: 8dbb76f5a3b7a7e4690546d9878c737f,
         type: 3}
       propertyPath: m_Priority
@@ -2581,6 +2587,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1156212051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8069496892502987851, guid: 4974e8dfaba6bc046a11f5322c383cd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 9164883631735247895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1218708925 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3604303739231731827, guid: e6de72025d4052941b55d4d051a70942,
@@ -2637,7 +2649,7 @@ Transform:
   - {fileID: 1506991436}
   - {fileID: 680407570}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1226200799
 EdgeCollider2D:
@@ -2757,7 +2769,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1250660392
 MonoBehaviour:
@@ -12244,7 +12256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1998493640
 Transform:
   m_ObjectHideFlags: 0

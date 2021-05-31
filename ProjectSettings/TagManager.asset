@@ -15,6 +15,7 @@ TagManager:
   - DeathMenu
   - EnemyBullet
   - BossHitBox
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -60,6 +61,9 @@ TagManager:
     locked: 0
   - name: Floor
     uniqueID: 1466963791
+    locked: 0
+  - name: Decorations
+    uniqueID: 1683432625
     locked: 0
   - name: BackgroundElements
     uniqueID: 4270675973
