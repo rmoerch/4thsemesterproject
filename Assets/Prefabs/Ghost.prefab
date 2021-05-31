@@ -310,10 +310,10 @@ GameObject:
   - component: {fileID: 91781318319684096}
   - component: {fileID: 91781318319684097}
   - component: {fileID: 91781318319684350}
-  - component: {fileID: 4146354985122037680}
+  - component: {fileID: 91781318319684351}
   m_Layer: 13
   m_Name: Ghost
-  m_TagString: Untagged
+  m_TagString: BossHitBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -423,7 +423,7 @@ MonoBehaviour:
   speed: 550
   nextWaypointDistance: 1
   minimumEnemyProximity: 1
-  isBossTriggered: 0
+  modeTimer: 0
 --- !u!50 &91781318319684098
 Rigidbody2D:
   serializedVersion: 4
@@ -504,7 +504,7 @@ MonoBehaviour:
   sortingOrderBase: 5000
   offset: -30
   staticObject: 0
---- !u!114 &4146354985122037680
+--- !u!114 &91781318319684351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -513,12 +513,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 91781318319684102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28a9322f01007cf4fa2d76db08c75c8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bd29da8d50ef894c9d15dfa94315013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
+  maxHP: 1000
   healthBar: {fileID: 91781318509609969}
-  portal: {fileID: 5744464605324216683, guid: 0099c2768a0752d4da8e3bb1e158a0bc, type: 3}
 --- !u!1 &91781318509609968
 GameObject:
   m_ObjectHideFlags: 0

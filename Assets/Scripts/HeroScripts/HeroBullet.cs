@@ -25,7 +25,7 @@ public class HeroBullet : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("BossHitBox"))
         {
-            collision.gameObject.GetComponentInParent<BossHP>().LoseHP(20);
+            collision.gameObject.GetComponentInParent<EnemyHP>().LoseHP(20);
         }
     }
 
