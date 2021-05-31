@@ -8,7 +8,11 @@ public class Spikes : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Hero"))
         {
-            collision.gameObject.GetComponentInParent<PlayerHP>().LoseHP(20);
+            collision.gameObject.GetComponentInParent<PlayerHP>().LoseHP(10);
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponentInParent<EnemyHP>().LoseHP(10);
         }
     }
 }

@@ -17,6 +17,7 @@ public class EnemyBullet : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.gameObject.CompareTag("EnemyBullet")) { return; }
         if (collision.gameObject.CompareTag("BossHitBox")) { return; }
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
@@ -27,6 +28,7 @@ public class EnemyBullet : MonoBehaviour
             collision.gameObject.GetComponentInParent<PlayerHP>().LoseHP(20);
             collision.gameObject.GetComponentInParent<Rigidbody2D>().AddForce(gameObject.transform.up * bulletForce, ForceMode2D.Impulse);
         }
+        
     }
 
     void OnBecameInvisible()

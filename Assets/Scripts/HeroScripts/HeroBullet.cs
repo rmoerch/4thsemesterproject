@@ -11,6 +11,7 @@ public class HeroBullet : MonoBehaviour
     {
         //Igrone collision of bullets with bullets
         Physics2D.IgnoreLayerCollision(9, 9);
+        Physics2D.IgnoreLayerCollision(0, 9);
     }
     void OnTriggerEnter2D(Collider2D collision)
     {

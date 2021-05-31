@@ -874,13 +874,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> parent of 8d8442f... Merge remote-tracking branch 'origin/master'
 --- !u!1 &446801440
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,11 +959,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -24291323
-<<<<<<< HEAD
-  m_SortingLayer: 3
-=======
   m_SortingLayer: 2
->>>>>>> parent of 8d8442f... Merge remote-tracking branch 'origin/master'
   m_SortingOrder: 0
   m_Sprite: {fileID: -818659787113659478, guid: a0d3fbbc155eb404a87f827b40a48dfe,
     type: 3}
@@ -984,11 +973,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> parent of 8d8442f... Merge remote-tracking branch 'origin/master'
->>>>>>> Stashed changes
 --- !u!1 &479774625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,7 +1050,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &479774629
 RectTransform:
