@@ -25,7 +25,10 @@ public class PlayerShootingScript : MonoBehaviour
     void Update()
     {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
         //if (EventSystem.current.IsPointerOverGameObject()) return;
 
 >>>>>>> Stashed changes

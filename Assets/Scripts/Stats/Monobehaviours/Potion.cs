@@ -5,6 +5,10 @@ using UnityEngine;
 public class Potion : MonoBehaviour
 {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes

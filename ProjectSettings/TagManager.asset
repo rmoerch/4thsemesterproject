@@ -16,6 +16,11 @@ TagManager:
   - EnemyBullet
   - BossHitBox
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  - Door
+  - Trap
+>>>>>>> Stashed changes
 =======
   - Door
   - Trap
@@ -67,6 +72,12 @@ TagManager:
     uniqueID: 1466963791
     locked: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  - name: Decorations
+    uniqueID: 1683432625
+    locked: 0
+>>>>>>> Stashed changes
 =======
   - name: Decorations
     uniqueID: 1683432625
