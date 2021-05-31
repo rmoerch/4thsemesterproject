@@ -22,7 +22,6 @@ public class EnemyBullet : MonoBehaviour
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, 0.5f);
         Destroy(gameObject);
-        Debug.Log(collision.name);
         if (collision.gameObject.CompareTag("Hero"))
         {
             collision.gameObject.GetComponentInParent<PlayerHP>().LoseHP(20);

@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class Potion : MonoBehaviour
 {
+<<<<<<< Updated upstream
     void OnTriggerEnter2D(Collider2D collision)
+=======
+    [SerializeField]
+    float healthRestore;
+
+    private Transform player;
+
+    private void Start()
     {
-        if (collision.gameObject.CompareTag("Hero"))
-        {
-            collision.gameObject.GetComponentInParent<PlayerHP>().GetHP(20);
-            Destroy(gameObject);
-        }
-       
+        player = GameObject.FindGameObjectWithTag("Hero").transform;
     }
-    
+
+    public void Use()
+    {
+        gameObject.GetComponentInParent<PlayerHP>().GetHP(healthRestore);
+        Destroy(gameObject);
+    }
+
 }

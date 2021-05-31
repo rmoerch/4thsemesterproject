@@ -1,38 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerShootingScript : MonoBehaviour
 {
     [SerializeField]
     private GameObject bulletPrefab;
 
-    private float localCoolDownTime;
+    [SerializeField]
+    private float shootCooldownTime = 20f;
     private float shootCooldown;
 
     [SerializeField]
     private float bulletForce = 20f;
 
-    private GameManager gM;
-
     private void Start()
     {
-        gM = GameManager.instance;
-        localCoolDownTime = gM.ShootCooldownTime;
-        localCoolDownTime *= Time.deltaTime;
+        shootCooldownTime = shootCooldownTime * Time.deltaTime;
     }
     // Update is called once per frame
     void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+
         if (shootCooldown <= 0)
         {
             if (Input.GetButton("Fire1"))
             {
                 Shoot();
-                shootCooldown = localCoolDownTime;
+                shootCooldown = shootCooldownTime;
             }
         }
-        else if (shootCooldown > 0){ shootCooldown -= 1 * Time.deltaTime ; }
+        else if (shootCooldown > 0){ shootCooldown = shootCooldown - 1 * Time.deltaTime ; }
+
     }
 
     void Shoot()
@@ -57,4 +58,5 @@ public class PlayerShootingScript : MonoBehaviour
         rb.AddForce( firePoint * bulletForce, ForceMode2D.Impulse);
 
     }
+
 }
