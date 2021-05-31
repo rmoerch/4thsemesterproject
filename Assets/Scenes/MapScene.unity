@@ -5193,60 +5193,36 @@ MonoBehaviour:
   randomWalkRooms: 1
   roomCenters: []
   roomsList:
-  - m_Position: {x: 55, y: 86, z: 0}
-    m_Size: {x: 19, y: 14, z: 0}
-  - m_Position: {x: 74, y: 86, z: 0}
-    m_Size: {x: 19, y: 14, z: 0}
-  - m_Position: {x: 0, y: 9, z: 0}
-    m_Size: {x: 13, y: 15, z: 0}
-  - m_Position: {x: 0, y: 24, z: 0}
-    m_Size: {x: 13, y: 17, z: 0}
-  - m_Position: {x: 42, y: 14, z: 0}
+  - m_Position: {x: 52, y: 58, z: 0}
+    m_Size: {x: 18, y: 12, z: 0}
+  - m_Position: {x: 28, y: 6, z: 0}
+    m_Size: {x: 15, y: 15, z: 0}
+  - m_Position: {x: 43, y: 6, z: 0}
+    m_Size: {x: 19, y: 15, z: 0}
+  - m_Position: {x: 6, y: 21, z: 0}
+    m_Size: {x: 10, y: 11, z: 0}
+  - m_Position: {x: 12, y: 32, z: 0}
     m_Size: {x: 14, y: 14, z: 0}
-  - m_Position: {x: 56, y: 4, z: 0}
-    m_Size: {x: 10, y: 15, z: 0}
-  - m_Position: {x: 56, y: 19, z: 0}
-    m_Size: {x: 10, y: 16, z: 0}
-  - m_Position: {x: 66, y: 27, z: 0}
-    m_Size: {x: 14, y: 13, z: 0}
-  - m_Position: {x: 16, y: 86, z: 0}
+  - m_Position: {x: 34, y: 32, z: 0}
     m_Size: {x: 11, y: 14, z: 0}
-  - m_Position: {x: 13, y: 9, z: 0}
-    m_Size: {x: 14, y: 17, z: 0}
-  - m_Position: {x: 27, y: 9, z: 0}
-    m_Size: {x: 10, y: 17, z: 0}
-  - m_Position: {x: 13, y: 26, z: 0}
-    m_Size: {x: 11, y: 15, z: 0}
-  - m_Position: {x: 24, y: 26, z: 0}
-    m_Size: {x: 13, y: 15, z: 0}
-  - m_Position: {x: 66, y: 10, z: 0}
-    m_Size: {x: 14, y: 17, z: 0}
-  - m_Position: {x: 55, y: 73, z: 0}
-    m_Size: {x: 13, y: 13, z: 0}
-  - m_Position: {x: 27, y: 86, z: 0}
-    m_Size: {x: 16, y: 14, z: 0}
-  - m_Position: {x: 43, y: 86, z: 0}
-    m_Size: {x: 12, y: 14, z: 0}
-  - m_Position: {x: 55, y: 54, z: 0}
-    m_Size: {x: 13, y: 19, z: 0}
-  - m_Position: {x: 68, y: 76, z: 0}
-    m_Size: {x: 14, y: 10, z: 0}
-  - m_Position: {x: 82, y: 76, z: 0}
-    m_Size: {x: 13, y: 10, z: 0}
-  - m_Position: {x: 81, y: 7, z: 0}
-    m_Size: {x: 19, y: 12, z: 0}
-  - m_Position: {x: 81, y: 19, z: 0}
-    m_Size: {x: 19, y: 13, z: 0}
-  - m_Position: {x: 77, y: 61, z: 0}
-    m_Size: {x: 18, y: 15, z: 0}
-  - m_Position: {x: 11, y: 58, z: 0}
-    m_Size: {x: 14, y: 18, z: 0}
-  - m_Position: {x: 37, y: 53, z: 0}
-    m_Size: {x: 18, y: 19, z: 0}
-  - m_Position: {x: 14, y: 76, z: 0}
-    m_Size: {x: 10, y: 10, z: 0}
-  - m_Position: {x: 24, y: 76, z: 0}
-    m_Size: {x: 14, y: 10, z: 0}
+  - m_Position: {x: 0, y: 58, z: 0}
+    m_Size: {x: 14, y: 12, z: 0}
+  - m_Position: {x: 16, y: 21, z: 0}
+    m_Size: {x: 17, y: 11, z: 0}
+  - m_Position: {x: 41, y: 21, z: 0}
+    m_Size: {x: 18, y: 11, z: 0}
+  - m_Position: {x: 6, y: 6, z: 0}
+    m_Size: {x: 15, y: 15, z: 0}
+  - m_Position: {x: 49, y: 32, z: 0}
+    m_Size: {x: 19, y: 14, z: 0}
+  - m_Position: {x: 24, y: 46, z: 0}
+    m_Size: {x: 10, y: 12, z: 0}
+  - m_Position: {x: 30, y: 58, z: 0}
+    m_Size: {x: 16, y: 12, z: 0}
+  - m_Position: {x: 34, y: 46, z: 0}
+    m_Size: {x: 12, y: 12, z: 0}
+  - m_Position: {x: 46, y: 46, z: 0}
+    m_Size: {x: 17, y: 12, z: 0}
 --- !u!4 &355707128
 Transform:
   m_ObjectHideFlags: 0
@@ -9541,13 +9517,6 @@ MonoBehaviour:
   availableRooms: []
   portal: {fileID: 0}
   potion: {fileID: 0}
-  chest: {fileID: 0}
-  npc: {fileID: 0}
-  cell: {fileID: 0}
-  key: {fileID: 0}
-  decorations: []
-  torches: []
-  traps: []
 --- !u!1 &593426192
 GameObject:
   m_ObjectHideFlags: 3
@@ -16279,28 +16248,28 @@ Tilemap:
     m_Data:
       e00: NaN
       e01: 0
-      e02: 1.05e-43
-      e03: 0
+      e02: 0
+      e03: NaN
       e10: NaN
       e11: 0
-      e12: NaN
-      e13: 0
-      e20: 1.05e-43
+      e12: 0
+      e13: NaN
+      e20: 0
       e21: 0
       e22: 0
-      e23: 8.704803e+9
-      e30: 1.1e-44
-      e31: NaN
+      e23: 0
+      e30: 0
+      e31: 0
       e32: 0
-      e33: 6.01e-43
+      e33: 0
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: -10.630066, g: -10.630066, b: -10.630066, a: -10.630066}
+    m_Data: {r: -3.505062e+10, g: -3.505062e+10, b: -3.505062e+10, a: -3.505062e+10}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -14, y: 0, z: 0}
-  m_Size: {x: 167, y: 171, z: 1}
+  m_Origin: {x: -5, y: 0, z: 0}
+  m_Size: {x: 123, y: 148, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -16357,7 +16326,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -24291323
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -21946,22 +21915,7 @@ MonoBehaviour:
   spawner: []
   availableRooms: []
   portal: {fileID: 4677487939449902783, guid: 5f678281b16b07145973f0a6bbf06935, type: 3}
-  potion: {fileID: 365397204213532301, guid: 0378be0e30d94fe48885f48f1cdd95be, type: 3}
-  chest: {fileID: 3868981135215778065, guid: d2263a895ec47364d898fc58b8285fc2, type: 3}
-  npc: {fileID: 2990175152423694643, guid: 018dd70a8daf8314d91281208bd35c50, type: 3}
-  cell: {fileID: 8729721541106348938, guid: c9b4f2713a7042c4e808b5d0792381ee, type: 3}
-  key: {fileID: 6857869679746253241, guid: 51992f06acdf03c479158035193b7a9e, type: 3}
-  decorations:
-  - {fileID: 514904150214608925, guid: 8ad43e0cc54240b47a451518a6a63000, type: 3}
-  - {fileID: 7022894283024035021, guid: 63fd459ea336c9344994c597fa564b8e, type: 3}
-  - {fileID: 8334543246053000227, guid: d7c863b03e2497e48914da121ceeb017, type: 3}
-  torches:
-  - {fileID: 2379104216069228094, guid: 47c217a7f4d16a54a92315b04381ddaa, type: 3}
-  - {fileID: 7766580238310010982, guid: 66da82e4cfb078645b824083d8d8e975, type: 3}
-  - {fileID: 8708990870792554510, guid: 6ed75e725f2aae64ea467a6f2cd6714c, type: 3}
-  - {fileID: 4053693728189203733, guid: 9ec16e9ff05ad804189c0de9cb12d116, type: 3}
-  traps:
-  - {fileID: 2709910699939827599, guid: ab683fb4fa4ce4d46b14a6d7c1d33e45, type: 3}
+  potion: {fileID: 4784808599819303601, guid: fbf7ebedf30fe464086bfb0c19e50504, type: 3}
 --- !u!4 &1418011053
 Transform:
   m_ObjectHideFlags: 0
@@ -22454,19 +22408,19 @@ Tilemap:
       e20: 1.05e-43
       e21: 0
       e22: 0
-      e23: 9.320202e+9
-      e30: 1.1e-44
+      e23: 1.8422609e+29
+      e30: 1.02e-43
       e31: NaN
       e32: 0
-      e33: 6.01e-43
+      e33: 5.4e-43
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: -11.986786, g: -11.986786, b: -11.986786, a: -11.986786}
+    m_Data: {r: -4.0178024e+10, g: -4.0178024e+10, b: -4.0178024e+10, a: -4.0178024e+10}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -26, y: 0, z: 0}
-  m_Size: {x: 175, y: 184, z: 1}
+  m_Origin: {x: -29, y: 0, z: 0}
+  m_Size: {x: 136, y: 158, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:

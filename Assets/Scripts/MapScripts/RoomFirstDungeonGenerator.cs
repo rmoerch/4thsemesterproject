@@ -19,7 +19,6 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     public List<BoundsInt> roomsList;
     public HashSet<Vector2Int> floor;
     public HashSet<Vector2Int> globalFloorList;
-    
 
     private void Start()
     {
@@ -169,5 +168,4 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         }
         return floor;
     }
-
 }

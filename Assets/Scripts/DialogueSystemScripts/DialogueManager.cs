@@ -7,16 +7,14 @@ public class DialogueManager : MonoBehaviour
 {
     public Text nameText;
     public Text dialogueText;
-   
+
     public Animator animator;
-    private Queue<string> sentenceQueue;
-    private List<string> sentenceList;
+
+    private Queue<string> sentences;
 
     void Start()
     {
-        sentenceQueue = new Queue<string>();
-        sentenceList = new List<string>();
-        
+        sentences = new Queue<string>();
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -25,53 +23,25 @@ public class DialogueManager : MonoBehaviour
 
         nameText.text = dialogue.name;
 
-        sentenceQueue.Clear();
+        sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
         {
-            sentenceQueue.Enqueue(sentence);
+            sentences.Enqueue(sentence);
         }
 
-        DisplayNextSentence();
-
-
-        //sentenceList.Clear();
-
-        //foreach (string sentence in dialogue.sentences)
-        //{
-        //    sentenceList.Add(sentence);
-        //}
-
-        //DisplayRandomSentence();
+        DisplayNextSentece();
     }
 
-    //public void DisplayRandomSentence()
-    //{
-
-    //    //If there are no sentences -> end the dialogue!
-    //    if(sentenceList.Count == 0)
-    //    {
-    //        EndDialogue();
-    //        return;
-    //    }
-
-    //    var sentence = Random.Range(0, sentenceList.Count);
-    //    dialogueText.text = sentenceList[sentence];
-    //    StopAllCoroutines();
-    //    StartCoroutine(TypeSentence(sentenceList[sentence]));
-
-    //}
-
-
-    public void DisplayNextSentence()
+    public void DisplayNextSentece()
     {
-        if (sentenceQueue.Count == 0)
+        if(sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
 
-        string sentence = sentenceQueue.Dequeue();
+        string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
@@ -84,7 +54,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.03f);
+            yield return new WaitForSeconds(0.05f);
         }
     }
 
@@ -93,13 +63,5 @@ public class DialogueManager : MonoBehaviour
     {
         animator.SetBool("IsOpen", false);
     }
-
-    //public void EndDialogueByKeyPress()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        animator.SetBool("IsOpen", false);
-    //    }
-    //}
-
+    
 }
