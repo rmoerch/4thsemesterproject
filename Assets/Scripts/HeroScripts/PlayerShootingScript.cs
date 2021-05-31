@@ -24,11 +24,6 @@ public class PlayerShootingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< Updated upstream
-=======
-        //if (EventSystem.current.IsPointerOverGameObject()) return;
-
->>>>>>> Stashed changes
         if (shootCooldown <= 0)
         {
             if (Input.GetButton("Fire1"))

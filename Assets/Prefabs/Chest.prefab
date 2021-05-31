@@ -71,11 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -977846847
-<<<<<<< Updated upstream
   m_SortingLayer: 4
-=======
-  m_SortingLayer: 5
->>>>>>> Stashed changes
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 45fe422356399d44487b168f62dd0509, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -145,13 +141,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a29568b281add44788aa10ecd8148b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   openChest: {fileID: 0}
-=======
-  chestEffect: {fileID: 1265982980283276348, guid: e4415fe5519c8154ea39cbd48adec6bd,
-    type: 3}
-  itemsToSpawn:
-  - {fileID: 365397204213532301, guid: 0378be0e30d94fe48885f48f1cdd95be, type: 3}
-  - {fileID: 8310660165276700860, guid: 0e2e7c7fd1ace6d469e2325beaed5ad2, type: 3}
-  - {fileID: 914145082521715806, guid: 576f9902cc18174418ed2ad44b7dbafd, type: 3}
->>>>>>> Stashed changes
