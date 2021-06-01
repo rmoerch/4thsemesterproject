@@ -101,7 +101,7 @@ public class TilemapVisualizer : MonoBehaviour
         {
             tile = wallFull;
         }
-        else if (WallTypeHelper.wallBottmEightDirections.Contains(typeAsInt))
+        else if (WallTypeHelper.wallBottomEightDirections.Contains(typeAsInt))
         {
             tile = wallBottom;
         }

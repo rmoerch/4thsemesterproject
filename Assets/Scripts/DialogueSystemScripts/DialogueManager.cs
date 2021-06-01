@@ -34,33 +34,40 @@ public class DialogueManager : MonoBehaviour
 
         DisplayNextSentence();
 
-
-        //sentenceList.Clear();
-
-        //foreach (string sentence in dialogue.sentences)
-        //{
-        //    sentenceList.Add(sentence);
-        //}
-
-        //DisplayRandomSentence();
     }
 
-    //public void DisplayRandomSentence()
-    //{
+    public void StartRandomDialogue(Dialogue dialogue)
+    {
+        animator.SetBool("IsOpen", true);
 
-    //    //If there are no sentences -> end the dialogue!
-    //    if(sentenceList.Count == 0)
-    //    {
-    //        EndDialogue();
-    //        return;
-    //    }
+        nameText.text = dialogue.name;
 
-    //    var sentence = Random.Range(0, sentenceList.Count);
-    //    dialogueText.text = sentenceList[sentence];
-    //    StopAllCoroutines();
-    //    StartCoroutine(TypeSentence(sentenceList[sentence]));
+        sentenceList.Clear();
 
-    //}
+        foreach (string sentence in dialogue.sentences)
+        {
+            sentenceList.Add(sentence);
+        }
+
+        DisplayRandomSentence();
+    }
+
+    public void DisplayRandomSentence()
+    {
+
+        //If there are no sentences -> end the dialogue!
+        if (sentenceList.Count == 0)
+        {
+            EndDialogue();
+            return;
+        }
+
+        var sentence = Random.Range(0, sentenceList.Count);
+        dialogueText.text = sentenceList[sentence];
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentenceList[sentence]));
+
+    }
 
 
     public void DisplayNextSentence()
@@ -93,13 +100,4 @@ public class DialogueManager : MonoBehaviour
     {
         animator.SetBool("IsOpen", false);
     }
-
-    //public void EndDialogueByKeyPress()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        animator.SetBool("IsOpen", false);
-    //    }
-    //}
-
 }
