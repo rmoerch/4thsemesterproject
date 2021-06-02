@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class AmmoCrate : MonoBehaviour
 {
-    [SerializeField]
-    int ammoRestore;
-    
     private Transform player;
 
     private void Start()
@@ -16,7 +13,7 @@ public class AmmoCrate : MonoBehaviour
 
     public void Use()
     {
-        //gameObject.GetComponentInParent<GunAmmo>().PickUpAmmo(ammoRestore);
+        player.GetComponentInChildren<GunAmmo>().AmmoRestore();
         Destroy(gameObject);
     }
 

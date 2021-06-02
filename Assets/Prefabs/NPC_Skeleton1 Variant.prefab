@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &479741523365916983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3178809908808753918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb5a0bd47e5c0843a1ae0e4910a6395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Aristotle
+    sentences:
+    - Tell me wanderer... Do you think my imprisonment ends here?
+    - Tell me wanderer... Do you really think you can save yourself... or anyone?
+    - Do you really think they are worth saving in the first place?
+    - Do as you see fit. Not like it will make a difference.
+--- !u!1001 &387972232005047245
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2990175152423694643, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC_Skeleton1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111042817369670619, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.4980628
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111042817369670619, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.019106269
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111042817369670619, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122697030997772409, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122697030997772409, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122697030997772409, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122697030997772409, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122697030997772409, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122697030997772409, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122697030997772409, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122697030997772409, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122697030997772409, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122697030997772409, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122697030997772409, guid: 018dd70a8daf8314d91281208bd35c50,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 018dd70a8daf8314d91281208bd35c50, type: 3}
+--- !u!1 &3178809908808753918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2990175152423694643, guid: 018dd70a8daf8314d91281208bd35c50,
+    type: 3}
+  m_PrefabInstance: {fileID: 387972232005047245}
+  m_PrefabAsset: {fileID: 0}

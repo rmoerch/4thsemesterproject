@@ -14,6 +14,8 @@ public class GunAmmo : MonoBehaviour
 
     private int localMagAmmo;
 
+    private int ammoRestore;
+
     private bool isReloading;
 
     private GameManager gM;
@@ -26,6 +28,7 @@ public class GunAmmo : MonoBehaviour
         //Take values from game manager 
         allAmmo = gM.AllAmmo;
         localMagAmmo = gM.MagAmmo;
+        ammoRestore = gM.AmmoRestore;
 
         //if it is first run, magazine is going to be empty
         if (localMagAmmo == 0)
@@ -103,6 +106,12 @@ public class GunAmmo : MonoBehaviour
         isReloading = false;
     }
 
+    public void AmmoRestore()
+    {
+        allAmmo += ammoRestore;
+        updateUI();
+    }
+
     //update ammo texts in the bottom, but also pass values to game manager
     private void updateUI()
     {
@@ -116,6 +125,7 @@ public class GunAmmo : MonoBehaviour
     {
         gM.AllAmmo = allAmmo;
         gM.MagAmmo = localMagAmmo;
+        
     }
 
     //send data to game manager each fixed frame

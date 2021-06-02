@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7873087197290385970}
   - component: {fileID: 7873087197290385969}
   - component: {fileID: 7873087197290385968}
-  - component: {fileID: 7873087197290385935}
+  - component: {fileID: 4682774171512151556}
   m_Layer: 11
   m_Name: AmmoCrate
   m_TagString: Untagged
@@ -129,7 +129,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.112241715, y: 0.11644706}
   m_EdgeRadius: 0
---- !u!114 &7873087197290385935
+--- !u!114 &4682774171512151556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,7 +138,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7873087197290385934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1770f55d828df74fa2be406b05a35f2, type: 3}
+  m_Script: {fileID: 11500000, guid: db9cc6791212c144ebaf876e94ff0fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: 100
+  itemButton: {fileID: 1739546501323629033, guid: 4f894ae3317f9a246af26302597ae333,
+    type: 3}

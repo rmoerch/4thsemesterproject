@@ -103,6 +103,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //holds value of current ammo restore
+    [SerializeField]
+    private int _ammoRestore = 100;
+
+    public int AmmoRestore
+    {
+        get
+        {
+            return _ammoRestore;
+        }
+        set
+        {
+            _ammoRestore = value;
+        }
+    }
+
     //cooldown between bullets fired from a gun
     [SerializeField]
     private float _shootCooldownTime = 100f;

@@ -12,11 +12,11 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Hero"))
         {
-            if(SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(3))
+            if(SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(2))
             {
                 TriggerRandomDialogue();
             }
-            else if(SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(2))
+            else if(SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
             {
                 TriggerDialogue();
             }

@@ -5455,7 +5455,8 @@ MonoBehaviour:
   _allAmmo: 6000
   _magSize: 60
   _magAmmo: 0
-  _shootCooldownTime: 100
+  _ammoRestore: 100
+  _shootCooldownTime: 50
 --- !u!1 &1499042221
 GameObject:
   m_ObjectHideFlags: 0
