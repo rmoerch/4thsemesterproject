@@ -11,8 +11,6 @@ public class EnemyAIScript : MonoBehaviour
 
     [SerializeField]
     public float speed;
-    [SerializeField]
-    public float nextWaypointDistance;
     //The distance at what enemy will stop, when too close / too far
     [SerializeField]
     private float minimumEnemyProximity;
@@ -21,6 +19,7 @@ public class EnemyAIScript : MonoBehaviour
 
 
     Path path;
+    float nextWaypointDistance = 1;
     int currentWaypoint = 0;
     bool reachedEndOfPath = false;
     Vector2 direction = Vector2.zero;

@@ -9,7 +9,6 @@ public class Enemy2AIScript : MonoBehaviour
     private Vector3 target;
     public Animator animator;
 
-    public float nextWaypointDistance = 1;
     [SerializeField]
     public float speed;
     //The distance at what enemy will stop, when too close / too far
@@ -24,6 +23,7 @@ public class Enemy2AIScript : MonoBehaviour
     private float jumpProximity;
 
     Path path;
+    float nextWaypointDistance = 1;
     int currentWaypoint = 0;
     int jumpCooldown = 0;
     bool reachedEndOfPath = false;

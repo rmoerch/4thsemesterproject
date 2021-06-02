@@ -15,14 +15,13 @@ public class BossAIScript : MonoBehaviour
 
     [SerializeField]
     public float speed;
-    [SerializeField]
-    public float nextWaypointDistance;
     //The distance at what enemy will stop, when too close
     [SerializeField]
     private float minimumEnemyProximity;
 
 
     Path path;
+    float nextWaypointDistance = 1;
     int currentWaypoint = 0;
     bool reachedEndOfPath = false;
     Vector2 direction = Vector2.zero;
