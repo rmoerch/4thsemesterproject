@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374653d9623861a4eb005ae8b9b7b214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackForce: 10
+  attackForce: 3
 --- !u!1001 &5539257291919354823
 PrefabInstance:
   m_ObjectHideFlags: 0

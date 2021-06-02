@@ -10,6 +10,7 @@ public class BossHP : MonoBehaviour
     HealthBarScript healthBar;
     int hP;
     public GameObject portal;
+    public GameObject item;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class BossHP : MonoBehaviour
         if (hP <= 0) 
         {
             Instantiate(portal, new Vector3(0, 0, 0), Quaternion.identity);
+            Instantiate(item, new Vector3(0, -3, 0), Quaternion.identity);
             GameObject.Destroy(gameObject); 
         }
     }
