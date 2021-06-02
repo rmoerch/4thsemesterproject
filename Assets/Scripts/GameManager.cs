@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     //maximum hp value
     [SerializeField]
-    private float _maxHP = 100;
+    private float _maxHP = 100f;
 
     public float MaxHP
     {

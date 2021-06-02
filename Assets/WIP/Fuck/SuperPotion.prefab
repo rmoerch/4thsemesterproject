@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5262047352999674806}
   - component: {fileID: 5262047352999674807}
   - component: {fileID: 5262047352999674792}
-  - component: {fileID: 8531770049949231832}
-  m_Layer: 0
+  - component: {fileID: -8184252950715214744}
+  m_Layer: 11
   m_Name: SuperPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5262047352999674794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67, y: 94, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -977846847
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 5550302956442217801, guid: a0d3fbbc155eb404a87f827b40a48dfe,
     type: 3}
@@ -94,10 +94,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0076675415, y: -0.0766716}
+  m_Offset: {x: 0.0034053177, y: -0.06331736}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -108,9 +108,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.55540466, y: 0.66265106}
+  m_Size: {x: 0.49762145, y: 0.6238299}
   m_EdgeRadius: 0
---- !u!114 &8531770049949231832
+--- !u!114 &-8184252950715214744
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,8 +119,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5262047352999674794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db9cc6791212c144ebaf876e94ff0fbe, type: 3}
+  m_Script: {fileID: 11500000, guid: 47164f7188978994aaccbebd22385a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 8386373320438265548, guid: 241e8556e6a6fa04f94863a6b3494ac4,
-    type: 3}
