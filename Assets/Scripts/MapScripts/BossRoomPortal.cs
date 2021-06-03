@@ -6,10 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class BossRoomPortal : MonoBehaviour
 {
+    private GameManager gM;
+
+    private void Start()
+    {
+        gM = GameManager.instance;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Hero"))
         {
+            gM.CurrentHP = gM.MaxHP;
             SceneManager.LoadScene(1);
         }
     }
