@@ -19,11 +19,9 @@ public class PlayerShootingScript : MonoBehaviour
     private void Start()
     {
         gM = GameManager.instance;
-        localCoolDownTime = gM.ShootCooldownTime;
-        localCoolDownTime *= Time.deltaTime;
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //if (EventSystem.current.IsPointerOverGameObject()) return;
 
@@ -32,10 +30,10 @@ public class PlayerShootingScript : MonoBehaviour
             if (Input.GetButton("Fire1"))
             {
                 Shoot();
-                shootCooldown = localCoolDownTime;
+                shootCooldown = gM.ShootCooldownTime;
             }
         }
-        else if (shootCooldown > 0){ shootCooldown -= 1 * Time.deltaTime ; }
+        else if (shootCooldown > 0){ shootCooldown -= 1; }
     }
 
     void Shoot()
