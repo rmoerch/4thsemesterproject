@@ -12,9 +12,9 @@ public class SuperPotionPickUp : MonoBehaviour
         gM = GameManager.instance;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collision.gameObject.CompareTag("Hero"))
+        if(collider.gameObject.CompareTag("Hero"))
         {
             gM.MaxHP += 100f;
             Destroy(gameObject);

@@ -14,10 +14,11 @@ public class EnemyBullet : MonoBehaviour
         Physics2D.IgnoreLayerCollision(9, 12);
         //Ignore collision of enemy bullets an enemy colliders
         Physics2D.IgnoreLayerCollision(12, 13);
+        Physics2D.IgnoreLayerCollision(12, 11);
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("EnemyHitBox")) { return; }
         if (collision.gameObject.CompareTag("EnemyBullet")) { return; }
         if (collision.gameObject.CompareTag("BossHitBox")) { return; }
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);

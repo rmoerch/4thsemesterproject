@@ -230,9 +230,9 @@ GameObject:
   - component: {fileID: 563368461}
   - component: {fileID: 563368460}
   - component: {fileID: 563368459}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BossTrigger
-  m_TagString: EnemyHitBox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
