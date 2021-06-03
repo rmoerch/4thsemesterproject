@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
 
     //all current ammo value
     [SerializeField]
-    private int _allAmmo = 6000;
+    private int _allAmmo = 450;
 
     public int AllAmmo
     {
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     //rather static but expansiable value to define size of magazine
     [SerializeField]
-    private int _magSize = 60;
+    private int _magSize = 30;
 
     public int MagSize
     {
@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
 
     //cooldown between bullets fired from a gun
     [SerializeField]
-    private float _shootCooldownTime = 100f;
+    private float _shootCooldownTime = 20f;
 
     public float ShootCooldownTime
     {
@@ -163,9 +163,9 @@ public class GameManager : MonoBehaviour
     public void ReLaunch()
     {
         MaxHP = 100;
-        AllAmmo = 6000;
-        MagSize = 60;
-        ShootCooldownTime = 100f;
+        AllAmmo = 450;
+        MagSize = 30;
+        ShootCooldownTime = 20f;
         MagAmmo = 0;
 }
 	public void OnApplicationQuit()

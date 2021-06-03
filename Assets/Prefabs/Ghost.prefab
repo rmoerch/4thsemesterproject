@@ -421,7 +421,6 @@ MonoBehaviour:
   targetTransform: {fileID: 0}
   animator: {fileID: 91781318319684103}
   speed: 550
-  nextWaypointDistance: 1
   minimumEnemyProximity: 1
   isBossTriggered: 0
 --- !u!50 &91781318319684098
@@ -516,7 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0071be1c97cebe4408eb342bed7e78c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10000
+  maxHP: 5000
   healthBar: {fileID: 91781318509609969}
   portal: {fileID: 5744464605324216683, guid: 0099c2768a0752d4da8e3bb1e158a0bc, type: 3}
   item: {fileID: 5262047352999674794, guid: bf7a56143f849e14aaf622035e7fc7aa, type: 3}

@@ -12,7 +12,7 @@ public class Spikes : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponentInParent<EnemyHP>().LoseHP(10);
+            collision.gameObject.GetComponentInParent<EnemyHP>().LoseHP(25);
         }
     }
 }

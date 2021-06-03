@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour
         gM = GameManager.instance;
         PlayerSpawn();
         //EnemySpawnCenter();
-        //EnemySpawnRandom();
+        EnemySpawnRandom();
         PortalSpawn();
         //PotionSpawn();
         ChestSpawn();
@@ -193,7 +193,7 @@ public class Spawner : MonoBehaviour
         List<Vector2Int> randomFloorTilesList = dungeonGenerator.globalFloorList.ToList();
         foreach (var floorTile in randomFloorTilesList)    
         {
-            if (Random.Range(0, 120) == 1)
+            if (Random.Range(0, 80) == 1)
             {
                 int i = Random.Range(0, randomFloorTilesList.Count);
                 Vector2Int spawnpoint = randomFloorTilesList[i];
@@ -201,6 +201,7 @@ public class Spawner : MonoBehaviour
                 Instantiate(enemyPrefab[randomIndex], new Vector3(spawnpoint.x, spawnpoint.y, 0), Quaternion.identity);
             }
         }
+        
     }
 
     private void UpdateAIMap()

@@ -43,7 +43,7 @@ public class PlayerHP : MonoBehaviour
 
     public void GetHP(float health)
     {
-        if (hP < 100)
+        if (hP < gM.MaxHP)
         {
             hP += health;
             healthBar.SetHealth(hP);

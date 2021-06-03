@@ -146,4 +146,6 @@ MonoBehaviour:
   itemsToSpawn:
   - {fileID: 365397204213532301, guid: 0378be0e30d94fe48885f48f1cdd95be, type: 3}
   - {fileID: 7873087197290385934, guid: 055988e9a1e87304bb709af2a693e862, type: 3}
+  - {fileID: 365397204213532301, guid: 0378be0e30d94fe48885f48f1cdd95be, type: 3}
+  - {fileID: 7873087197290385934, guid: 055988e9a1e87304bb709af2a693e862, type: 3}
   - {fileID: 914145082521715806, guid: 576f9902cc18174418ed2ad44b7dbafd, type: 3}

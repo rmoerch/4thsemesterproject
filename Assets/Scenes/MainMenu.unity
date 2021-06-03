@@ -5452,11 +5452,11 @@ MonoBehaviour:
     type: 3}
   _maxHP: 100
   _currentHP: 0
-  _allAmmo: 6000
-  _magSize: 60
+  _allAmmo: 450
+  _magSize: 30
   _magAmmo: 0
   _ammoRestore: 100
-  _shootCooldownTime: 50
+  _shootCooldownTime: 20
 --- !u!1 &1499042221
 GameObject:
   m_ObjectHideFlags: 0

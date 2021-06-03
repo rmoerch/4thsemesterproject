@@ -8,12 +8,13 @@ public class Chest : MonoBehaviour
 {
     public GameObject chestEffect;
     public GameObject[] itemsToSpawn;
+    private bool isOpen = false;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if (collision.gameObject.CompareTag("Hero"))
+        if (collision.gameObject.CompareTag("Hero") && isOpen == false)
         {
+            isOpen = true;
             Invoke("ChestAnimation", 0f);
             Invoke("SpawnAfterDelay", 1.5f);
         }

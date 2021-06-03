@@ -22040,6 +22040,8 @@ MonoBehaviour:
     type: 3}
   enemyPrefab:
   - {fileID: 8310660165276700860, guid: 0e2e7c7fd1ace6d469e2325beaed5ad2, type: 3}
+  - {fileID: 8310660165276700860, guid: 0e2e7c7fd1ace6d469e2325beaed5ad2, type: 3}
+  - {fileID: 8310660165276700860, guid: 0e2e7c7fd1ace6d469e2325beaed5ad2, type: 3}
   - {fileID: 914145082521715806, guid: 576f9902cc18174418ed2ad44b7dbafd, type: 3}
   portal: {fileID: 4677487939449902783, guid: 5f678281b16b07145973f0a6bbf06935, type: 3}
   potion: {fileID: 365397204213532301, guid: 0378be0e30d94fe48885f48f1cdd95be, type: 3}
