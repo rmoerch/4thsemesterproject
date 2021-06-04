@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 	protected GameManager() { }
 	public static GameManager instance = null;
 
-    //use this public field to insert hero prefab
+    //use this field to insert hero prefab
     [SerializeField]
     private GameObject _heroPrefab;
 
