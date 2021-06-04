@@ -28,10 +28,8 @@ public class Spawner : MonoBehaviour
     {
         gM = GameManager.instance;
         PlayerSpawn();
-        //EnemySpawnCenter();
         EnemySpawnRandom();
         PortalSpawn();
-        //PotionSpawn();
         ChestSpawn();
         CellSpawn();
         KeySpawn();

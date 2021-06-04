@@ -15,10 +15,18 @@ MonoBehaviour:
   dialogue:
     name: Aristotle
     sentences:
-    - Tell me wanderer... Do you think my imprisonment ends here?
-    - Tell me wanderer... Do you really think you can save yourself... or anyone?
-    - Do you really think they are worth saving in the first place?
-    - Do as you see fit. Not like it will make a difference.
+    - 'You exploit those around you to feed your lust, not caring about the impact
+      of your actions! '
+    - To feed your endless hunger, you destroy all living things in your path!
+    - Your kind's infinite desire for materialistic things, wreaks havoc in your
+      search.
+    - All men are without a care for anything. You tend not, to the needs of anything!
+    - Uncontrolled rage seethes through the veins of your fellow men. You seek not
+      redemption, but retribution!
+    - Insatiable desire towards anything you are not in possesion of, destroys the
+      world you are only such a small part of.
+    - Your pride taints the soul, yet you boast of conquest as life other than yours
+      have no meaning!
 --- !u!1001 &387972232005047245
 PrefabInstance:
   m_ObjectHideFlags: 0
