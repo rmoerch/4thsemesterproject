@@ -15,10 +15,12 @@ public class PlayerShootingScript : MonoBehaviour
     private float bulletForce = 20f;
 
     private GameManager gM;
+    private AudioSource _audioSource;
 
     private void Start()
     {
         gM = GameManager.instance;
+        _audioSource = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -29,6 +31,7 @@ public class PlayerShootingScript : MonoBehaviour
         {
             if (Input.GetButton("Fire1"))
             {
+                _audioSource.Play();
                 Shoot();
                 shootCooldown = gM.ShootCooldownTime;
             }
@@ -39,7 +42,11 @@ public class PlayerShootingScript : MonoBehaviour
     void Shoot()
     {
         //if heroAmmo.Shoot returns false - no ammo to shoot - don't shoot
-        if (!gameObject.GetComponent<GunAmmo>().Shoot()) { return; }
+        if (!gameObject.GetComponent<GunAmmo>().Shoot()) 
+        {
+            _audioSource.Stop();
+            return; 
+        }
 
         //Point 0 of bullet instantiation
         Vector3 position = (Vector3)gameObject.GetComponent<Rigidbody2D>().position;

@@ -33,8 +33,6 @@ public class Enemy2AIScript : MonoBehaviour
     Vector2 enemyPosition;
     Rigidbody2D enemyRb;
 
-
-
     private void Start()
     {
         seeker = GetComponent<Seeker>();
@@ -96,7 +94,7 @@ public class Enemy2AIScript : MonoBehaviour
     void FixedUpdate()
     {
         if (path == null) return;
-
+        
         float lastDirection = 0f; // 0 - up, 1 - up-right, 2 - right, 3 - down-right, 4 - down, 5 - down-left, 6 - left, 7 - up-left
         //Save last known walking direction (needed for idle positioning)
         if (direction.y > 0 && direction.x == 0) { lastDirection = 0f; }

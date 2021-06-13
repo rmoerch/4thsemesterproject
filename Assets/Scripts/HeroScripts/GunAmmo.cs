@@ -75,7 +75,7 @@ public class GunAmmo : MonoBehaviour
         //If already reloading - don't reload
         if(isReloading) { return; }
 
-        //If plater is out of ammo, dont do anything
+        //If player is out of ammo, dont do anything
         else if(allAmmo <= 0) { return; }
 
         else
